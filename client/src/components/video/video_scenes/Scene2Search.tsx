@@ -33,27 +33,27 @@ export function Scene2Search() {
       <div className="absolute inset-0 bg-[#F1F5F9] blur-3xl opacity-30 bg-[url('https://s.w.org/style/images/about/WordPress-logotype-wmark.png')] bg-no-repeat bg-center bg-[length:800px]" />
       
       <motion.div 
-        className="z-50 mb-16 flex items-center gap-4 bg-white/90 backdrop-blur-md px-8 py-4 rounded-3xl border border-slate-200 shadow-xl"
+        className="z-50 mb-[5vh] flex items-center gap-[1vw] bg-white/90 backdrop-blur-md px-[2vw] py-[1.5vh] rounded-3xl border border-slate-200 shadow-xl"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: [0.8, 1.1, 1], opacity: 1 }}
         transition={{ duration: 0.8, times: [0, 0.6, 1] }}
       >
-        <div className="flex items-center gap-2 font-black text-3xl text-slate-800">
-           <Command className="w-8 h-8" /> <span className="text-slate-400 text-2xl font-bold">+</span> <span className="text-4xl">K</span>
+        <div className="flex items-center gap-[0.5vw] font-black text-heading-md text-slate-800">
+           <Command className="w-[2vw] h-[2vw]" /> <span className="text-slate-400 text-[1.5vw] font-bold">+</span> <span className="text-[2.5vw]">K</span>
         </div>
       </motion.div>
 
       <motion.div 
-        className="w-[90%] max-w-2xl bg-[#1E293B] rounded-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] border border-slate-700 overflow-hidden z-20"
+        className="w-[90%] max-w-[70vw] bg-[#1E293B] rounded-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] border border-slate-700 overflow-hidden z-20"
         initial={{ y: 100, opacity: 0, scale: 0.9 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
         transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.2 }}
       >
-        <div className="p-7 border-b border-slate-800 flex items-center gap-6 bg-[#0F172A]">
-          <Search className="w-7 h-7 text-slate-500" />
-          <div className="flex-1 text-3xl font-bold text-white font-mono tracking-tight">
+        <div className="p-[1.5vw] border-b border-slate-800 flex items-center gap-[1.5vw] bg-[#0F172A]">
+          <Search className="w-[1.5vw] h-[1.5vw] text-slate-500" />
+          <div className="flex-1 text-[2vw] font-bold text-white font-mono tracking-tight">
             {query}
-            <motion.span animate={{ opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 0.8 }} className="inline-block w-1 h-8 bg-[#1D8A77] ml-2 align-middle" />
+            <motion.span animate={{ opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 0.8 }} className="inline-block w-[0.3vw] h-[2vw] bg-[#1D8A77] ml-2 align-middle" />
           </div>
         </div>
 
@@ -92,12 +92,12 @@ export function Scene2Search() {
       </motion.div>
 
       <motion.div 
-        className="absolute bottom-20 text-center px-8"
+        className="absolute bottom-[5vh] text-center px-[2vw]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 3 }}
       >
-        <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+        <h2 className="text-heading-md font-black text-slate-900 tracking-tight">
           Global Admin Search. <span className="text-[#1D8A77]">Find anything in milliseconds.</span>
         </h2>
       </motion.div>

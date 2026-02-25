@@ -56,27 +56,27 @@ border-radius: 16px;`;
 
   return (
     <motion.div
-      className="absolute inset-0 bg-white flex items-center justify-center overflow-hidden p-12"
+      className="absolute inset-0 bg-white flex items-center justify-center overflow-hidden p-[2vw]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="w-full max-w-7xl flex gap-12 items-center h-full relative">
+      <div className="w-full max-w-responsive flex gap-[3vw] items-center h-full relative">
         {/* Live Preview Side */}
-        <div className="flex-1 flex flex-col items-center justify-center min-h-[50vh] relative z-10">
+        <div className="flex-1 flex flex-col items-center justify-center min-h-[50vh] relative z-10 px-[2vw]">
            <motion.h1 
-            className="text-8xl font-black text-center tracking-tighter leading-none transition-all duration-300"
+            className="text-heading-xl font-black text-center tracking-tighter leading-none transition-all duration-300"
             animate={{
               color: hasColor ? '#1D8A77' : '#0F172A',
               backgroundColor: hasBg ? '#f0fdfa' : 'transparent',
-              padding: hasPadding ? '20px 40px' : '0px',
+              padding: hasPadding ? 'clamp(1rem, 2vw, 2.5rem) clamp(2rem, 3vw, 2.5rem)' : '0px',
               borderRadius: hasRadius ? '16px' : '0px',
             }}
           >
             {headline}
-            <motion.span animate={{ opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 0.6 }} className="inline-block w-1.5 h-16 bg-[#1D8A77] ml-3 align-middle" />
+            <motion.span animate={{ opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 0.6 }} className="inline-block w-[0.5vw] h-[4vh] bg-[#1D8A77] ml-[1vw] align-middle" />
           </motion.h1>
-          <div className="mt-12 w-full max-w-lg h-1 bg-slate-100 rounded-full overflow-hidden">
+          <div className="mt-[3vh] w-[80%] max-w-[60vw] h-[0.5vh] bg-slate-100 rounded-full overflow-hidden">
              <motion.div 
                className="h-full bg-[#1D8A77]"
                initial={{ width: 0 }}
@@ -89,21 +89,21 @@ border-radius: 16px;`;
         {/* PRO Dark Panel with Layout Morph */}
         <motion.div 
           layoutId="inspector-panel"
-          className="w-[35%] max-w-[500px] bg-[#1E293B] rounded-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.6)] border border-slate-700 overflow-hidden text-white flex flex-col h-[50vh] max-h-[650px] relative z-20"
+          className="w-[30vw] max-w-[45vw] bg-[#1E293B] rounded-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.6)] border border-slate-700 overflow-hidden text-white flex flex-col h-auto max-h-[85vh] relative z-20 mb-8"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: 'spring', damping: 25 }}
         >
-          <div className="p-6 bg-[#0F172A] border-b border-slate-800 flex justify-between items-center shadow-lg relative z-10">
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-xl bg-[#1D8A77] flex items-center justify-center shadow-lg">
-                <Target className="w-6 h-6 text-white" />
+          <div className="p-[1.5vw] bg-[#0F172A] border-b border-slate-800 flex justify-between items-center shadow-lg relative z-10">
+            <div className="flex items-center gap-[1vw]">
+              <div className="w-[2.5vw] h-[2.5vw] rounded-xl bg-[#1D8A77] flex items-center justify-center shadow-lg">
+                <Target className="w-[1.5vw] h-[1.5vw] text-white" />
               </div>
-              <span className="font-black text-lg tracking-tight">DevSniper <span className="text-[#1D8A77]">PRO</span></span>
+              <span className="font-black text-[1.2vw] tracking-tight">DevSniper <span className="text-[#1D8A77]">PRO</span></span>
             </div>
-            <div className="flex gap-1.5 items-center">
-               <div className="text-[10px] font-black text-slate-500 mr-2 tracking-widest uppercase">Live Inspector</div>
-               <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)] animate-pulse" />
+            <div className="flex gap-[0.5vw] items-center">
+               <div className="text-[0.6vw] font-black text-slate-500 mr-[0.5vw] tracking-widest uppercase">Live Inspector</div>
+               <div className="w-[0.7vw] h-[0.7vw] rounded-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)] animate-pulse" />
             </div>
           </div>
 
@@ -122,40 +122,40 @@ border-radius: 16px;`;
              ))}
           </div>
 
-          <div className="p-10 space-y-8 flex-1 flex flex-col bg-[#0F172A]/30">
-            <div className="flex-1 bg-[#0F172A] rounded-2xl p-8 font-mono text-base leading-relaxed border border-slate-800 shadow-inner relative overflow-hidden">
-               <div className="absolute top-0 left-0 w-1 h-full bg-[#1D8A77]/20" />
+          <div className="p-[1.5vw] space-y-[1.5vw] flex-1 flex flex-col bg-[#0F172A]/30">
+            <div className="flex-1 bg-[#0F172A] rounded-2xl p-[1.5vw] font-mono text-[0.9vw] leading-relaxed border border-slate-800 shadow-inner relative overflow-hidden">
+               <div className="absolute top-0 left-0 w-[0.3vw] h-full bg-[#1D8A77]/20" />
                {activeTab === 'text' ? (
                  <div className="text-white font-medium">{headline}</div>
                ) : (
-                 <div className="space-y-1">
+                 <div className="space-y-[0.5vw]">
                    <div className="text-slate-500">selector {'{'}</div>
-                   <div className="pl-6 text-emerald-400 whitespace-pre-wrap min-h-[140px]">
+                   <div className="pl-[1vw] text-emerald-400 whitespace-pre-wrap min-h-[6vh]">
                      {cssCode}
-                     <motion.span animate={{ opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 0.6 }} className="inline-block w-2.5 h-5 bg-[#1D8A77] ml-2 align-middle" />
+                     <motion.span animate={{ opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 0.6 }} className="inline-block w-[0.6vw] h-[1.2vh] bg-[#1D8A77] ml-[0.5vw] align-middle" />
                    </div>
                    <div className="text-slate-500">{'}'}</div>
                  </div>
                )}
             </div>
 
-            <div className="flex justify-end items-center gap-6 pointer-events-none">
+            <div className="flex justify-end items-center gap-[1.5vw] pb-[0.5vw] pointer-events-none">
                <AnimatePresence>
                  {showSuccess && (
                    <motion.div 
-                    className="flex items-center gap-3 text-emerald-400 font-black text-sm px-4 py-2 bg-emerald-500/10 rounded-full border border-emerald-500/20"
+                    className="flex items-center gap-[0.5vw] text-emerald-400 font-black text-[0.8vw] px-[1vw] py-[0.5vh] bg-emerald-500/10 rounded-full border border-emerald-500/20"
                     initial={{ scale: 0.5, opacity: 0, x: 20 }}
                     animate={{ scale: 1, opacity: 1, x: 0 }}
                    >
-                     <CheckCircle2 className="w-5 h-5" />
+                     <CheckCircle2 className="w-[1vw] h-[1vw]" />
                      Saved to WordPress
                    </motion.div>
                  )}
                </AnimatePresence>
                <motion.div 
-                className={`px-12 py-4 rounded-2xl font-black text-lg flex items-center gap-3 shadow-2xl transition-all ${showSuccess ? 'bg-emerald-500 scale-105' : 'bg-[#1D8A77]'}`}
+                className={`px-[3vw] py-[1vh] rounded-2xl font-black text-[1.1vw] flex items-center gap-[0.5vw] shadow-2xl transition-all ${showSuccess ? 'bg-emerald-500 scale-105' : 'bg-[#1D8A77]'}`}
                >
-                 <Save className="w-6 h-6" />
+                 <Save className="w-[1.3vw] h-[1.3vw]" />
                  Save Changes
                </motion.div>
             </div>
@@ -164,12 +164,12 @@ border-radius: 16px;`;
       </div>
 
       <motion.div 
-        className="absolute bottom-12 left-0 right-0 text-center"
+        className="absolute bottom-[3vh] left-0 right-0 text-center px-[2vw]"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1 }}
       >
-        <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+        <h2 className="text-heading-md font-black text-slate-900 tracking-tight">
           PRO: Live Edit Text & CSS. <span className="text-[#1D8A77]">Zero Context Switching.</span>
         </h2>
       </motion.div>

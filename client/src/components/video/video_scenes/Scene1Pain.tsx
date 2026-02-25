@@ -4,7 +4,7 @@ import { MousePointer2 } from 'lucide-react';
 export function Scene1Pain() {
   const domLines = [
     { indent: 0, tag: 'div', class: 'elementor-section-wrap' },
-    { indent: 2, tag: 'section', class: 'elementor-section elementor-top-section' },
+    { indent: 2, tag: 'section', class: 'elementor-section element-top-section' },
     { indent: 4, tag: 'div', class: 'elementor-container elementor-column-gap-default' },
     { indent: 6, tag: 'div', class: 'elementor-column elementor-col-100' },
     { indent: 8, tag: 'div', class: 'elementor-widget-wrap elementor-element-populated' },
@@ -21,15 +21,26 @@ export function Scene1Pain() {
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="w-[90%] max-w-3xl bg-[#1E293B] rounded-2xl shadow-2xl overflow-hidden border border-slate-700 aspect-video relative">
-        <div className="h-8 bg-[#0F172A] flex items-center px-4 gap-1.5 border-b border-slate-800">
-          <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
-          <div className="w-2.5 h-2.5 rounded-full bg-amber-500/50" />
-          <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/50" />
-          <div className="ml-4 text-[10px] font-mono text-slate-500">Chrome DevTools - DOM Tree</div>
+      <motion.div 
+        className="absolute top-[3vh] left-0 right-0 text-center z-50 px-[2vw]"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.8, duration: 1 }}
+      >
+        <h2 className="text-heading-lg font-black text-slate-900 tracking-tight max-w-responsive mx-auto">
+          Still wasting hours digging through the DOM?
+        </h2>
+      </motion.div>
+
+      <div className="w-[90%] max-w-responsive bg-[#1E293B] rounded-2xl shadow-2xl overflow-hidden border border-slate-700 aspect-video relative mt-[4vh]">
+        <div className="h-[2vh] bg-[#0F172A] flex items-center px-[1vw] gap-[0.4vw] border-b border-slate-800">
+          <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-red-500/50" />
+          <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-amber-500/50" />
+          <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-emerald-500/50" />
+          <div className="ml-[1vw] text-[0.7vw] font-mono text-slate-500">Chrome DevTools - DOM Tree</div>
         </div>
         
-        <div className="p-8 font-mono text-[11px] leading-relaxed">
+        <div className="p-[2vw] font-mono text-[0.75vw] leading-relaxed">
           {domLines.map((line, i) => (
             <motion.div 
               key={i}
@@ -66,17 +77,6 @@ export function Scene1Pain() {
           <MousePointer2 className="w-10 h-10 text-white fill-white drop-shadow-xl opacity-80" />
         </motion.div>
       </div>
-
-      <motion.div 
-        className="absolute bottom-20 text-center"
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-      >
-        <h2 className="text-5xl font-black text-slate-900 tracking-tight">
-          Still wasting hours digging through the DOM?
-        </h2>
-      </motion.div>
     </motion.div>
   );
 }

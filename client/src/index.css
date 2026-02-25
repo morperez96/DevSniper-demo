@@ -49,3 +49,28 @@ body {
   background-color: var(--color-bg-light);
   color: var(--color-text-primary);
 }
+
+/* Viewport-relative typography for video scaling */
+.text-heading-xl {
+  font-size: clamp(2rem, 6vw, 8rem);
+  line-height: 1;
+}
+
+.text-heading-lg {
+  font-size: clamp(1.5rem, 4.5vw, 5rem);
+  line-height: 1.1;
+}
+
+.text-heading-md {
+  font-size: clamp(1.25rem, 3vw, 3.5rem);
+  line-height: 1.2;
+}
+
+.text-body-lg {
+  font-size: clamp(1rem, 2vw, 2rem);
+  line-height: 1.5;
+}
+
+.max-w-responsive {
+  max-width: min(90%, 85vw);
+}

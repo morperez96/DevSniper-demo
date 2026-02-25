@@ -21,35 +21,35 @@ export function Scene3Inspector() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full max-w-6xl bg-white rounded-[2rem] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.2)] border border-slate-200 overflow-hidden relative flex flex-col h-[70vh]">
-        <div className="h-12 bg-slate-50 border-b border-slate-200 flex items-center px-6 gap-2">
-          <div className="flex gap-2">
-            <div className="w-3.5 h-3.5 rounded-full bg-[#FF5F56] shadow-sm" />
-            <div className="w-3.5 h-3.5 rounded-full bg-[#FFBD2E] shadow-sm" />
-            <div className="w-3.5 h-3.5 rounded-full bg-[#27C93F] shadow-sm" />
+      <div className="w-[90%] max-w-responsive bg-white rounded-[2rem] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.2)] border border-slate-200 overflow-hidden relative flex flex-col h-[70vh]">
+        <div className="h-[3vh] bg-slate-50 border-b border-slate-200 flex items-center px-[1.5vw] gap-[0.5vw]">
+          <div className="flex gap-[0.5vw]">
+            <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-[#FF5F56] shadow-sm" />
+            <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-[#FFBD2E] shadow-sm" />
+            <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-[#27C93F] shadow-sm" />
           </div>
-          <div className="mx-auto bg-slate-200 h-6 w-80 rounded-lg shadow-inner" />
+          <div className="mx-auto bg-slate-200 h-[1.5vh] w-[15vw] rounded-lg shadow-inner" />
         </div>
 
-        <div className="flex-1 flex flex-col items-center justify-center text-center gap-12 bg-white relative p-20">
-          <div className="max-w-3xl space-y-6">
+        <div className="flex-1 flex flex-col items-center justify-center text-center gap-[5vh] bg-white relative p-[3vw]">
+          <div className="max-w-[80vw] space-y-[2vh]">
             <motion.h1 
-              className={`text-8xl font-black text-slate-900 tracking-tighter transition-all duration-500 rounded-2xl ${step === 2 ? 'ring-4 ring-[#1D8A77] bg-[#1D8A77]/5 p-4' : ''}`}
+              className={`text-heading-xl font-black text-slate-900 tracking-tighter transition-all duration-500 rounded-2xl ${step === 2 ? 'ring-4 ring-[#1D8A77] bg-[#1D8A77]/5 p-4' : ''}`}
             >
               Ultimate Workflow
             </motion.h1>
-            <p className="text-2xl text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed">
+            <p className="text-body-lg text-slate-500 font-medium max-w-[60vw] mx-auto leading-relaxed">
               Experience the future of development with DevSniper PRO. Direct frontend editing without complexity.
             </p>
           </div>
 
-          <div className="flex gap-8 pointer-events-none">
+          <div className="flex gap-[2vw] pointer-events-none">
             <motion.div 
-              className={`px-12 py-5 bg-[#1D8A77] text-white rounded-2xl font-black text-2xl shadow-2xl transition-all duration-500 ${step === 1 ? 'ring-4 ring-[#1D8A77] ring-offset-4' : ''}`}
+              className={`px-[3vw] py-[1.2vh] bg-[#1D8A77] text-white rounded-2xl font-black text-[1.5vw] shadow-2xl transition-all duration-500 ${step === 1 ? 'ring-4 ring-[#1D8A77] ring-offset-4' : ''}`}
             >
               Get Started
             </motion.div>
-            <div className="px-12 py-5 bg-slate-50 text-slate-900 rounded-2xl font-black text-2xl border border-slate-200">
+            <div className="px-[3vw] py-[1.2vh] bg-slate-50 text-slate-900 rounded-2xl font-black text-[1.5vw] border border-slate-200">
               Live Demo
             </div>
           </div>
@@ -96,12 +96,12 @@ export function Scene3Inspector() {
       </div>
 
       <motion.div 
-        className="absolute top-16 text-center"
+        className="absolute top-[3vh] text-center px-[2vw]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
       >
-        <h2 className="text-5xl font-black text-slate-900 tracking-tight">
+        <h2 className="text-heading-lg font-black text-slate-900 tracking-tight">
           Bring the Inspector into your <span className="text-[#1D8A77]">frontend.</span>
         </h2>
       </motion.div>

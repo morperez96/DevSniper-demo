@@ -11,15 +11,15 @@ export function Scene6ClosingCTA() {
     >
       <div className="absolute inset-0 bg-[radial-gradient(#1D8A77_1px,transparent_1px)] [background-size:48px_48px] opacity-[0.03]" />
       
-      <div className="z-10 flex flex-col items-center text-center space-y-[6vh] px-[4vw] max-w-5xl">
+      <div className="z-10 flex flex-col items-center text-center space-y-[6vh] px-[4vw] max-w-responsive">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: 'spring', damping: 15 }}
           className="relative"
         >
-          <div className="w-32 h-32 rounded-[2.5rem] bg-[#1D8A77] flex items-center justify-center shadow-[0_20px_50px_-10px_rgba(29,138,119,0.5)]">
-            <Target className="w-16 h-16 text-white" strokeWidth={3} />
+          <div className="w-[8vw] h-[8vw] rounded-[2.5rem] bg-[#1D8A77] flex items-center justify-center shadow-[0_20px_50px_-10px_rgba(29,138,119,0.5)]">
+            <Target className="w-[4vw] h-[4vw] text-white" strokeWidth={3} />
           </div>
           <motion.div 
             className="absolute inset-0 rounded-[2.5rem] bg-[#1D8A77] z-[-1]"
@@ -29,7 +29,7 @@ export function Scene6ClosingCTA() {
         </motion.div>
 
         <motion.h1 
-          className="text-8xl font-black text-slate-900 tracking-tighter leading-none"
+          className="text-heading-xl font-black text-slate-900 tracking-tighter leading-none"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -41,15 +41,15 @@ export function Scene6ClosingCTA() {
         </motion.h1>
 
         <motion.div 
-          className="flex gap-8 justify-center"
+          className="flex gap-[2vw] justify-center flex-wrap"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <div className="px-14 py-6 rounded-[2rem] font-black text-2xl border-4 border-slate-200 text-slate-300 cursor-default pointer-events-none">
+          <div className="px-[3vw] py-[1.5vh] rounded-[2rem] font-black text-[1.5vw] border-4 border-slate-200 text-slate-300 cursor-default pointer-events-none whitespace-nowrap">
             Get DevSniper Free
           </div>
-          <div className="px-14 py-6 rounded-[2rem] font-black text-2xl bg-[#1D8A77] text-white shadow-[0_30px_60px_-15px_rgba(29,138,119,0.5)] cursor-default pointer-events-none">
+          <div className="px-[3vw] py-[1.5vh] rounded-[2rem] font-black text-[1.5vw] bg-[#1D8A77] text-white shadow-[0_30px_60px_-15px_rgba(29,138,119,0.5)] cursor-default pointer-events-none whitespace-nowrap">
             Upgrade to PRO
           </div>
         </motion.div>

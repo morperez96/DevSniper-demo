@@ -1,0 +1,56 @@
+Act as an Elite SaaS Motion UI Architect. Your task is to REFINE the existing 40-45 second automated promotional presentation for "DevSniper PRO" in React and Framer Motion.
+
+CRITICAL DIRECTIVE: PRESERVE THE EXISTING MAGIC!
+Do NOT change the overall sequence, the macOS browser frames, the messy DOM code style, the Command Palette (Cmd+K) search, the Target Crosshair logic, or the beautiful Live Edit text/CSS typing animations. Keep the exact same pacing and light theme.
+
+ONLY APPLY THESE 4 SPECIFIC FIXES:
+1. Scene 1 Title Position: Move the main text ("Still wasting hours digging through the DOM?") to the TOP CENTER of the screen. It must sit clearly above and separate from the messy code block.
+2. Scene 4 Panel Cutoff Fix: Fix the CSS positioning of the DevSniper PRO floating Dark UI Panel. Ensure it has proper bottom padding/margin inside its container so it is 100% FULLY VISIBLE and NEVER cut off at the bottom. The "Save" button must be perfectly clear.
+3. Scene 5 Features Grid Upgrade: Transform the basic features list into 8 IMPRESSIVE, LARGE FEATURE CARDS. Each card must have a subtle drop-shadow, a prominent Lucide icon centered at the top of the card, and bold text below it.
+4. Scene 6 Separation: Keep the final CTA (Logo + Purchase Buttons) entirely on its own separate final scene, after the features grid completely fades out.
+
+=== THE PRESERVED & UPGRADED STORYBOARD ===
+
+Scene 1: The Developer's Pain (0s - 7s)
+- UI: Miniaturized macOS window with stylized complex DOM tree and raw CSS (Dark Slate & Teal).
+- *FIX APPLIED:* Typography ("Still wasting hours...") is securely at the TOP CENTER.
+- Action: Cursor moves hesitantly inside the code block.
+
+Scene 2: The Command Palette Search (7s - 14s)
+- Transition: Smooth crossfade to blurred WordPress wp-admin dashboard.
+- Action: "Cmd + K" keystroke. The DevSniper Command Palette snaps open.
+- Simulation: Auto-type "hero". Shows rows: [Image] Hero_Banner.jpg | [FileText] Home Page | [User] Admin.
+
+Scene 3: The Target Inspector (14s - 22s)
+- Transition: Zoom into full-size realistic macOS browser frame showing a pristine modern webpage.
+- Action: Cursor morphs into the Teal Target Crosshair (`<Target />`).
+- Animation: Crosshair hovers over a button, then glides to the massive Hero Title. Shows Tooltips.
+
+Scene 4: Live Edit & Sync (22s - 34s)
+- Action: Crosshair clicks Hero Title. Tooltip morphs into the full DevSniper PRO Panel.
+- *FIX APPLIED:* Panel is perfectly positioned, fully visible, not cut off.
+- Live Text Edit: Switch to "Text". Auto-type: "The Ultimate Developer Workflow". Background Title updates IN REAL TIME.
+- Live CSS Edit: Switch to "CSS". Auto-type: `color: #1D8A77; background: #f0fdfa; padding: 20px 40px; border-radius: 16px;`. Visuals transform with every line.
+- Action: Cursor clicks glowing Teal "Save". Checkmark appears.
+
+Scene 5: The Ultimate Value Grid (34s - 40s)
+- Transition: Sweep to pristine white/teal gradient. Browser frame disappears.
+- *FIX APPLIED:* A clean 2x4 grid of 8 LARGE FEATURE CARDS pops in.
+  - [Edit] Live Text & CSS
+  - [Zap] Zero Frontend Bloat
+  - [Users] Team Shared Favorites
+  - [Search] Global Admin Search
+  - [Database] Elementor Data Sync
+  - [Layout] Native WordPress UI
+  - [Clipboard] One-Click Copy Paths
+  - [RefreshCw] Smart Cache Clearing
+
+Scene 6: The Closing CTA (40s - 45s)
+- Transition: Features grid fades out smoothly.
+- UI Reveal: DevSniper Logo scales up.
+- Text: "Stop Searching. Start Snipping."
+- Action: Buttons elegantly fade up: [ Get DevSniper Free ] (Outline) and [ Upgrade to PRO ] (Solid Teal).
+
+=== TECHNICAL REQUIREMENTS ===
+1. Tech: React, Tailwind CSS, Framer Motion, Lucide React.
+2. DO NOT TRUNCATE. Write the complete component. Wait for me to say "continue" if you hit the output limit.
