@@ -8,10 +8,10 @@ import { Scene5ValueGrid } from './video_scenes/Scene5ValueGrid';
 import { Scene6ClosingCTA } from './video_scenes/Scene6ClosingCTA';
 
 const SCENE_DURATIONS = {
-  pain: 5500,
+  pain: 3500,
   inspector: 6500,
-  liveEdit: 9500,
-  search: 5500,
+  liveEdit: 12000,
+  search: 4000,
   valueGrid: 4500,
   closingCTA: 3500,
 };

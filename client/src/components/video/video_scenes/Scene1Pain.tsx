@@ -27,13 +27,13 @@ export function Scene1Pain() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.4 }}
     >
       <motion.div 
         className="mb-[4vh] text-center z-50 px-[2vw]"
         initial={{ y: -15, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
       >
         <h2 className="text-heading-lg font-black text-slate-900 tracking-tight max-w-[80vw] mx-auto leading-tight">
           Still hunting for selectors in the DOM?<br/>
@@ -59,7 +59,7 @@ export function Scene1Pain() {
               style={{ paddingLeft: `calc(${line.indent * 1.8}vw + 0.5vw)` }}
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 + i * 0.06 }}
+              transition={{ delay: 0.1 + i * 0.04 }}
             >
               <span className="text-slate-500">&lt;</span>
               <span className="text-pink-400">{line.tag}</span>
@@ -90,7 +90,7 @@ export function Scene1Pain() {
             y: [40, 120, 200, 280, 150] 
           }}
           transition={{ 
-            duration: 10, 
+            duration: 3, 
             repeat: Infinity, 
             ease: "easeInOut"
           }}
