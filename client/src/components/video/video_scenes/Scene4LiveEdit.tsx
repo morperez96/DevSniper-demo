@@ -68,16 +68,16 @@ border-radius: 12px;`;
 
       <div className="w-full max-w-[90vw] flex gap-[3vw] items-center h-full relative">
         {/* Live Preview Side */}
-        <div className="flex-1 flex flex-col items-center justify-center min-h-[40vh] relative z-10 px-[2vw]">
+        <div className="flex-1 flex flex-col items-center justify-center min-h-[40vh] relative z-10 px-[1vw]">
            <motion.h1 
-            className="text-heading-xl font-black text-center tracking-tighter leading-tight transition-all duration-300 shadow-sm max-w-[40vw]"
+            className="text-heading-xl font-black text-center tracking-tighter leading-[1.1] transition-all duration-300 shadow-sm max-w-[55vw] w-full"
             animate={{
               color: hasColor ? '#1D8A77' : '#0F172A',
               backgroundColor: hasBg ? '#f0fdfa' : 'transparent',
-              padding: hasRadius ? 'clamp(12px, 1.5vw, 32px) clamp(24px, 3vw, 64px)' : '0px',
-              borderRadius: hasRadius ? 'clamp(12px, 1.5vw, 24px)' : '0px',
-              boxShadow: hasBg ? '0 20px 50px -12px rgba(29, 138, 119, 0.15)' : 'none',
-              border: hasBg ? '1px solid rgba(29, 138, 119, 0.1)' : '1px solid transparent'
+              padding: hasRadius ? 'clamp(20px, 2.5vw, 48px) clamp(40px, 5vw, 96px)' : '0px',
+              borderRadius: hasRadius ? 'clamp(16px, 2vw, 32px)' : '0px',
+              boxShadow: hasBg ? '0 25px 60px -12px rgba(29, 138, 119, 0.2)' : 'none',
+              border: hasBg ? '1px solid rgba(29, 138, 119, 0.15)' : '1px solid transparent'
             }}
           >
             {headline}
