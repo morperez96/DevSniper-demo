@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { MousePointer2 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export function Scene1Pain() {
   const [hoveredLine, setHoveredLine] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const domLines = [
     { indent: 0, tag: 'html', class: 'no-js' },
@@ -41,7 +42,7 @@ export function Scene1Pain() {
         </h2>
       </motion.div>
 
-      <div className="w-[55%] max-w-[45vw] bg-[#1E293B] rounded-2xl shadow-2xl overflow-hidden border border-slate-700 aspect-video relative">
+      <div className="w-[55%] max-w-[45vw] bg-[#1E293B] rounded-2xl shadow-2xl overflow-hidden border border-slate-700 aspect-video relative" ref={containerRef}>
         <div className="h-[2.5vh] bg-[#0F172A] flex items-center px-[1vw] gap-[0.4vw] border-b border-slate-800">
           <div className="w-[0.5vw] h-[0.5vw] rounded-full bg-red-500/40" />
           <div className="w-[0.5vw] h-[0.5vw] rounded-full bg-amber-500/40" />
@@ -55,7 +56,7 @@ export function Scene1Pain() {
           {domLines.map((line, i) => (
             <motion.div 
               key={i}
-              className={`whitespace-nowrap transition-colors duration-200 px-[0.6vw] rounded ${hoveredLine === i ? 'bg-blue-500/30 ring-1 ring-blue-400/30' : ''}`}
+              className={`whitespace-nowrap px-[0.6vw] rounded transition-all duration-150 ${hoveredLine === i ? 'bg-blue-500/30 ring-1 ring-blue-400/30 translate-x-1' : 'opacity-80'}`}
               style={{ paddingLeft: `calc(${line.indent * 1.8}vw + 0.5vw)` }}
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
@@ -83,20 +84,28 @@ export function Scene1Pain() {
           </div>
         </div>
 
+        {/* Improved Mouse Cursor Logic */}
         <motion.div
           className="absolute z-50 pointer-events-none"
+          initial={{ x: 50, y: 40 }}
           animate={{ 
-            x: [50, 200, 80, 250, 100], 
-            y: [40, 120, 200, 280, 150] 
+            x: [50, 220, 100, 260, 120], 
+            y: [60, 140, 220, 180, 80] 
           }}
           transition={{ 
             duration: 3, 
             repeat: Infinity, 
-            ease: "easeInOut"
+            ease: "linear"
           }}
           onUpdate={(latest: any) => {
-            const y = latest.y;
-            const lineIndex = Math.floor((y - 40) / 24);
+            // Precise line detection logic
+            const containerHeight = containerRef.current?.offsetHeight || 1;
+            const contentPadding = containerHeight * 0.1; // roughly 2.5vh header + padding
+            const lineSpacing = 24; // matches leading-relaxed roughly
+            
+            const relativeY = latest.y - contentPadding;
+            const lineIndex = Math.floor(relativeY / lineSpacing);
+            
             if (lineIndex >= 0 && lineIndex < domLines.length) {
               setHoveredLine(lineIndex);
             } else {
@@ -104,7 +113,7 @@ export function Scene1Pain() {
             }
           }}
         >
-          <MousePointer2 className="w-7 h-7 text-white fill-[#1D8A77] drop-shadow-[0_0_15px_rgba(29,138,119,0.6)]" />
+          <MousePointer2 className="w-5 h-5 text-white fill-[#1D8A77] drop-shadow-[0_0_8px_rgba(29,138,119,0.5)]" />
         </motion.div>
       </div>
     </motion.div>
