@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Target, Type, Code2, Save, CheckCircle2 } from 'lucide-react';
+import { Target, Type, Code2, Save, CheckCircle2, Settings } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export function Scene4LiveEdit() {
@@ -118,6 +118,7 @@ border-radius: 12px;`;
                 className={`flex-1 py-[0.8vh] text-center text-[clamp(8px,0.9vw,12px)] font-black uppercase tracking-widest transition-all cursor-default ${activeTab === tab.toLowerCase() ? 'text-white border-b-2 border-[#1D8A77] bg-[#0F172A]/40' : 'text-slate-500'}`}
                >
                  <div className="flex flex-col items-center gap-[0.3vh]">
+                   {tab === 'General' && <Settings className="w-[clamp(10px,1vw,14px)] h-[clamp(10px,1vw,14px)]" />}
                    {tab === 'Text' && <Type className="w-[clamp(10px,1vw,14px)] h-[clamp(10px,1vw,14px)]" />}
                    {tab === 'CSS' && <Code2 className="w-[clamp(10px,1vw,14px)] h-[clamp(10px,1vw,14px)]" />}
                    {tab}
