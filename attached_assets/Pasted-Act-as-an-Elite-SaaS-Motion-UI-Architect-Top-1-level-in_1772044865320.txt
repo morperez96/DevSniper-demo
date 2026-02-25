@@ -1,0 +1,66 @@
+Act as an Elite SaaS Motion UI Architect (Top 1% level, inspired by Vercel and Stripe web design). Your ultimate goal is to build a flawless, highly professional, 45-60 second automated promotional presentation using React and Framer Motion for "DevSniper PRO".
+
+CRITICAL DIRECTIVES FOR PREMIUM QUALITY:
+- Do not rush. Allow the user time to read the text and appreciate the Live Edit magic.
+- Use advanced Framer Motion features: `spring` physics for the cursor, smooth `layout` morphing for UI panels, and satisfying `staggerChildren` for lists.
+- Aesthetics: Ultra-premium. Use subtle drop-shadows (glassmorphism where appropriate), perfect Inter typography, light pristine backgrounds for the presentation, and rich Dark Slate (#1E293B) for the DevSniper UI to make it pop.
+- Brand Teal: #1D8A77.
+
+=== THE MASTERPIECE STORYBOARD ===
+
+Scene 1: The Developer's Pain (0s - 10s)
+- UI: A highly realistic, miniaturized macOS window. Inside, display a stylized, incredibly complex DOM tree and raw CSS. It should look like Chrome DevTools but styled in dark slate and teal so it looks aesthetically pleasing yet totally overwhelming.
+- Action: A cursor moves hesitantly around the complex nested `<div>` and `.elementor-widget-wrap` classes.
+- Typography Overlay (Elegant & Bold): "Still wasting hours digging through the DOM?"
+- Transition: The macOS window smoothly scales down and fades out.
+
+Scene 2: The Command Palette Search (10s - 18s)
+- Transition: Smooth crossfade to a subtly blurred WordPress wp-admin dashboard mockup.
+- Action: "Cmd + K" keystroke visually pops up.
+- UI Reveal: The DevSniper Command Palette snaps into the center with a beautiful spring animation and a deep shadow.
+- Simulation: Auto-type "hero". Instantly populate 3 categorized rows with icons (Lucide):
+  [Image Icon] Hero_Banner.jpg | [FileText Icon] Home Page | [User Icon] Admin.
+- Typography: "Global Admin Search. Find anything in milliseconds."
+
+Scene 3: The Target Inspector (18s - 28s)
+- Transition: Cinematic zoom into a full-size realistic macOS browser frame showing a pristine, light-themed modern webpage (English Hero Title, Subtitle, two Buttons).
+- Action: The normal cursor smoothly morphs into the DevSniper Teal Target Crosshair (`<Target />` from Lucide).
+- Animation: The Crosshair glides using spring physics.
+  1. Hovers over a button -> Crisp teal border appears. Tooltip: "TAG: a | CLASSES: .btn-primary".
+  2. Glides smoothly to the massive Hero Title -> Teal border appears. Tooltip updates.
+- Typography: "Bring the Inspector into your frontend."
+
+Scene 4: The Core Magic - Live Edit & Sync (28s - 45s) [TAKE YOUR TIME HERE]
+- Action: Crosshair clicks the Hero Title. The tooltip elegantly morphs (`layoutId`) into the full DevSniper PRO floating Dark UI Panel.
+- Live Text Edit: 
+  - Switch to the "Text" tab in the panel.
+  - Auto-type: "The Ultimate Developer Workflow". 
+  - Visual: The massive English Hero Title on the background website changes IN REAL TIME, character by character.
+- Live CSS Edit:
+  - Switch to the "CSS" tab.
+  - Auto-type slowly enough to read: 
+    `color: #1D8A77;` (Title instantly turns Teal)
+    `background: #f0fdfa;` (Background instantly applies)
+    `padding: 20px 40px;` (Padding instantly expands)
+    `border-radius: 16px;` (Corners instantly round)
+- Action: Cursor clicks a glowing Teal "Save" button. A premium checkmark and "Saved to WordPress" badge appear.
+- Typography: "PRO: Live Edit Text & CSS. Zero Context Switching."
+
+Scene 5: The Ultimate Value (45s - End)
+- Background sweeps to a pristine white/teal gradient.
+- UI: A clean, beautifully spaced 2x4 grid (8 items) of features pops in with a satisfying cascade stagger animation:
+  1. "✓ Live Text & CSS Editing"
+  2. "✓ Zero Frontend Bloat"
+  3. "✓ Team Shared Favorites"
+  4. "✓ Global Admin Search"
+  5. "✓ Elementor Data Sync"
+  6. "✓ Native WordPress UI"
+  7. "✓ One-Click Copy Paths"
+  8. "✓ Smart Cache Clearing"
+- Final Hero Text (Massive): "Stop Searching. Start Snipping."
+- Buttons elegantly fade up: [ Get DevSniper Free ] and [ Upgrade to PRO ].
+
+=== TECHNICAL REQUIREMENTS ===
+1. Tech: React, Tailwind CSS, Framer Motion, Lucide React.
+2. DO NOT TRUNCATE THE CODE. Write the complete, production-ready, highly polished component. If you reach the output limit, stop and I will tell you to continue.
+3. Use absolute positioning and `z-index` carefully so the macOS browser frame, the webpage content, and the DevSniper floating panel interact perfectly.
