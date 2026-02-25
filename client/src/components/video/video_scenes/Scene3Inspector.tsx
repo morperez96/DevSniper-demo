@@ -96,7 +96,7 @@ export function Scene3Inspector() {
       </div>
 
       <motion.div 
-        className="absolute top-[3vh] text-center px-[2vw]"
+        className="absolute top-[6vh] text-center px-[2vw]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
