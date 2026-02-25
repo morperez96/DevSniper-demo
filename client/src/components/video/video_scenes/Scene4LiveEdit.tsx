@@ -81,7 +81,7 @@ border-radius: 12px;`;
             }}
           >
             {headline}
-            <motion.span animate={{ opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 0.6 }} className="inline-block w-[0.5vw] h-[3vh] bg-[#1D8A77] ml-[1vw] align-middle" />
+            <motion.span animate={{ opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 0.6 }} className="inline-block w-[0.5vw] h-[8vh] bg-[#1D8A77] ml-[1vw] align-middle" />
           </motion.h1>
           <div className="mt-[3vh] w-full max-w-[30vw] h-[0.4vh] bg-slate-100 rounded-full overflow-hidden">
              <motion.div 
