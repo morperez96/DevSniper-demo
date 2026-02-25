@@ -35,15 +35,15 @@ export function Scene1Pain() {
         </h2>
       </motion.div>
 
-      <div className="w-[90%] max-w-[80vw] bg-[#1E293B] rounded-xl shadow-xl overflow-hidden border border-slate-700 aspect-video relative">
-        <div className="h-[1.5vh] bg-[#0F172A] flex items-center px-[0.8vw] gap-[0.3vw] border-b border-slate-800">
-          <div className="w-[0.5vw] h-[0.5vw] rounded-full bg-red-500/50" />
-          <div className="w-[0.5vw] h-[0.5vw] rounded-full bg-amber-500/50" />
-          <div className="w-[0.5vw] h-[0.5vw] rounded-full bg-emerald-500/50" />
-          <div className="ml-[0.5vw] text-[clamp(8px,0.8vw,12px)] font-mono text-slate-500">Chrome DevTools</div>
+      <div className="w-[60%] max-w-[50vw] bg-[#1E293B] rounded-xl shadow-xl overflow-hidden border border-slate-700 aspect-video relative">
+        <div className="h-[2vh] bg-[#0F172A] flex items-center px-[0.8vw] gap-[0.3vw] border-b border-slate-800">
+          <div className="w-[0.4vw] h-[0.4vw] rounded-full bg-red-500/50" />
+          <div className="w-[0.4vw] h-[0.4vw] rounded-full bg-amber-500/50" />
+          <div className="w-[0.4vw] h-[0.4vw] rounded-full bg-emerald-500/50" />
+          <div className="ml-[0.5vw] text-[clamp(6px,0.6vw,10px)] font-mono text-slate-500">Chrome DevTools</div>
         </div>
         
-        <div className="p-[1.2vw] font-mono text-[clamp(8px,1vw,12px)] leading-relaxed relative h-full">
+        <div className="p-[1vw] font-mono text-[clamp(6px,0.7vw,10px)] leading-tight relative h-full">
           {domLines.map((line, i) => (
             <motion.div 
               key={i}
