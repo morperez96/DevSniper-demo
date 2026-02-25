@@ -1,0 +1,65 @@
+Act as an Elite Creative Frontend Developer and Motion Designer. Your task is to build a highly polished, automated React + Framer Motion animated presentation (a "code-based promo video") for a WordPress plugin suite called "DevSniper" & "DevSniper PRO".
+
+CRITICAL SHIFT IN FOCUS:
+1. The presentation background must be a clean, modern Light Theme (White/Off-white) matching our landing page, NOT dark mode. 
+2. De-emphasize Elementor. The main selling point is MASSIVE TIME SAVING: "Stop hunting for elements, edit and save in milliseconds."
+3. The mock webpage content must be in ENGLISH.
+4. Showcase ALL PRO features, specifically emphasizing LIVE editing for BOTH Text and CSS, demonstrating multiple real-time changes before saving.
+
+=== BRAND GUIDELINES & ASSETS ===
+- Typography: Inter or Roboto.
+- Colors: 
+  - Presentation Background: #FFFFFF to #F8FAFC (Clean light gradients).
+  - DevSniper Brand Teal (Primary Accent): #1D8A77 (Use for highlights, targets, buttons).
+  - Inspector UI Panel: Dark Slate (#1E293B) to create contrast against the light background.
+- Logo Concept: A magnifying glass with a target crosshair inside.
+
+=== THE STORYBOARD (35-Second Auto-Playing Sequence) ===
+
+Scene 1: The Pain & The Hook (0s - 6s)
+- Background: Clean White.
+- Visual: A ticking clock icon and a frustrated cursor moving erratically.
+- Bold Text appearing: "Stop wasting hours hunting for the right CSS class."
+- Animation: The screen wipes clean. The DevSniper Logo scales up smoothly with the tagline: "Bring the Inspector into your website. Find & Edit in milliseconds."
+
+Scene 2: Instant Discovery (6s - 14s)
+- Background transitions to a mockup of a modern, light-themed website header.
+- Dummy English Text on screen: A large heading saying "Welcome to our awesome website".
+- Action: Cursor morphs into the DevSniper Teal Crosshair. It hovers over the heading.
+- UI Reveal: A sleek teal border perfectly outlines the text. The DevSniper Tooltip pops up instantly showing: "TAG: h1 | CLASSES: .hero-title | DOM PATH: div > h1". Include a "Copy" icon next to each.
+- Text Overlay: "Hover. Inspect. Copy. Done."
+
+Scene 3: PRO Feature - Live Text Editing (14s - 22s)
+- Action: Cursor clicks the tooltip, which smoothly expands into the full DevSniper PRO floating panel.
+- UI: The panel shows tabs: "General", "Text", "CSS".
+- Action: Cursor clicks the "Text" tab. A textarea appears containing "Welcome to our awesome website".
+- Simulation: Show automated typing, changing the text to: "Join the Biggest Developer Event of 2024!"
+- Live Result: As the text is typed in the panel, the massive heading on the background website updates IN REAL TIME.
+- Text Overlay: "PRO: Live Text Editing directly on the frontend."
+
+Scene 4: PRO Feature - Live CSS Editing & Save (22s - 29s)
+- Action: Cursor clicks the "CSS" tab in the PRO panel. A code editor appears.
+- Simulation: Show automated typing of CSS: 
+  `color: #1D8A77;`
+  `background: #f0fdfa;`
+  `padding: 15px 30px;`
+  `border-radius: 12px;`
+- Live Result: With every line typed, the English heading on the background visually transforms (changes color, gets a background, padding, and rounded corners) IN REAL TIME.
+- Action: Cursor clicks a glowing Teal "Save" button. A success checkmark animation plays.
+- Text Overlay: "PRO: Write CSS and Save directly to WordPress."
+
+Scene 5: Value Proposition & CTA (29s - 35s)
+- Background: Sweeps back to a pristine White/Light Teal gradient.
+- Staggered Text Animations (Fading up one by one):
+  - "✓ Zero Context Switching"
+  - "✓ Inspect Classes & Paths Instantly"
+  - "✓ Live Edit Text & CSS"
+  - "✓ Save Hours of Workflow"
+- Final Hero Text: "Stop Searching. Start Snipping."
+- Buttons fade in: [ Get DevSniper Free ] (Outline) and [ Upgrade to PRO ] (Solid Teal).
+
+=== TECHNICAL REQUIREMENTS ===
+1. Use `framer-motion` for all animations (`motion.div`, `AnimatePresence`). Use `staggerChildren` and `spring` transitions for a premium feel.
+2. Build the PRO Panel UI to look like a high-end SaaS tool.
+3. The sequence MUST AUTO-PLAY on load, managed by a precise React `useEffect` timeline or Framer Motion sequence. 
+4. Output the complete, production-ready React component code.

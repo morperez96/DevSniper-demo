@@ -1,15 +1,17 @@
 import { AnimatePresence } from 'framer-motion';
 import { useVideoPlayer } from '@/lib/video';
-import { Scene1Branding } from './video_scenes/Scene1Branding';
-import { Scene2AdminSearch } from './video_scenes/Scene2AdminSearch';
-import { Scene3Inspection } from './video_scenes/Scene3Inspection';
-import { Scene4Summary } from './video_scenes/Scene4Summary';
+import { Scene1Pain } from './video_scenes/Scene1Pain';
+import { Scene2Discovery } from './video_scenes/Scene2Discovery';
+import { Scene3LiveText } from './video_scenes/Scene3LiveText';
+import { Scene4LiveCSS } from './video_scenes/Scene4LiveCSS';
+import { Scene5ValueCTA } from './video_scenes/Scene5ValueCTA';
 
 const SCENE_DURATIONS = {
-  branding: 4000,
-  admin: 7000,
-  inspection: 12000,
-  summary: 7000,
+  pain: 6000,
+  discovery: 8000,
+  liveText: 8000,
+  liveCSS: 7000,
+  cta: 6000,
 };
 
 export default function VideoTemplate() {
@@ -20,14 +22,14 @@ export default function VideoTemplate() {
 
   return (
     <div
-      className="w-full h-screen overflow-hidden relative"
-      style={{ backgroundColor: 'var(--color-bg-dark)' }}
+      className="w-screen h-screen overflow-hidden relative bg-white"
     >
       <AnimatePresence mode="wait">
-        {currentScene === 0 && <Scene1Branding key="scene1" />}
-        {currentScene === 1 && <Scene2AdminSearch key="scene2" />}
-        {currentScene === 2 && <Scene3Inspection key="scene3" />}
-        {currentScene === 3 && <Scene4Summary key="scene4" />}
+        {currentScene === 0 && <Scene1Pain key="pain" />}
+        {currentScene === 1 && <Scene2Discovery key="discovery" />}
+        {currentScene === 2 && <Scene3LiveText key="liveText" />}
+        {currentScene === 3 && <Scene4LiveCSS key="liveCSS" />}
+        {currentScene === 4 && <Scene5ValueCTA key="cta" />}
       </AnimatePresence>
     </div>
   );
