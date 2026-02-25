@@ -49,17 +49,17 @@ export function Scene5ValueGrid() {
         initial="hidden"
         animate="show"
       >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-[1.5vw]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-[2vw]">
           {features.map((f, i) => (
             <motion.div 
               key={i}
               variants={item}
-              className="flex flex-col items-center gap-[1.5vh] bg-white p-[1.5vw] rounded-2xl border border-slate-100 shadow-md hover:shadow-lg transition-all text-center group"
+              className="flex flex-col items-center justify-center gap-[1.2vh] bg-white p-[1.2vw] rounded-xl border border-slate-100 shadow-md hover:shadow-lg transition-all text-center group aspect-square w-full max-w-[15vw] mx-auto"
             >
-              <div className="w-[clamp(40px,4vw,60px)] h-[clamp(40px,4vw,60px)] rounded-xl bg-[#1D8A77]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <f.icon className="w-[clamp(20px,2vw,30px)] h-[clamp(20px,2vw,30px)] text-[#1D8A77]" strokeWidth={2.5} />
+              <div className="w-[clamp(32px,3vw,48px)] h-[clamp(32px,3vw,48px)] rounded-lg bg-[#1D8A77]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <f.icon className="w-[clamp(16px,1.5vw,24px)] h-[clamp(16px,1.5vw,24px)] text-[#1D8A77]" strokeWidth={2.5} />
               </div>
-              <span className="text-[clamp(0.75rem,1.5vw,1rem)] font-black text-slate-900 tracking-tight leading-tight">{f.title}</span>
+              <span className="text-[clamp(0.7rem,1.2vw,0.9rem)] font-black text-slate-900 tracking-tight leading-tight px-1">{f.title}</span>
             </motion.div>
           ))}
         </div>
