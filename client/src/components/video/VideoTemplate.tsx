@@ -9,9 +9,9 @@ import { Scene6ClosingCTA } from './video_scenes/Scene6ClosingCTA';
 
 const SCENE_DURATIONS = {
   pain: 7000,
-  search: 7000,
   inspector: 8000,
   liveEdit: 12000,
+  search: 7000,
   valueGrid: 6000,
   closingCTA: 5000,
 };
@@ -26,9 +26,9 @@ export default function VideoTemplate() {
     <div className="w-screen h-screen overflow-hidden relative bg-white">
       <AnimatePresence mode="wait">
         {currentScene === 0 && <Scene1Pain key="pain" />}
-        {currentScene === 1 && <Scene2Search key="search" />}
-        {currentScene === 2 && <Scene3Inspector key="inspector" />}
-        {currentScene === 3 && <Scene4LiveEdit key="liveEdit" />}
+        {currentScene === 1 && <Scene3Inspector key="inspector" />}
+        {currentScene === 2 && <Scene4LiveEdit key="liveEdit" />}
+        {currentScene === 3 && <Scene2Search key="search" />}
         {currentScene === 4 && <Scene5ValueGrid key="valueGrid" />}
         {currentScene === 5 && <Scene6ClosingCTA key="closingCTA" />}
       </AnimatePresence>
