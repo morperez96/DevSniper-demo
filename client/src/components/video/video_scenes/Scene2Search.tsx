@@ -85,8 +85,8 @@ export function Scene2Search() {
             >
               {[
                 { icon: ImageIcon, title: 'Hero_Banner.jpg', type: 'Media', color: 'text-emerald-400' },
-                { icon: FileText, title: 'Home Page', type: 'Page', color: 'text-blue-400' },
-                { icon: User, title: 'Admin User', type: 'User', color: 'text-purple-400' },
+                { icon: FileText, title: 'Hero Section Page', type: 'Page', color: 'text-blue-400' },
+                { icon: User, title: 'Hero Admin User', type: 'User', color: 'text-purple-400' },
               ].map((item, idx) => (
                 <motion.div 
                   key={idx}
