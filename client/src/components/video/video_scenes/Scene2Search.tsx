@@ -5,15 +5,15 @@ import { useState, useEffect } from 'react';
 export function Scene2Search() {
   const [query, setQuery] = useState('');
   const [showResults, setShowResults] = useState(false);
+  const keyword = "hero";
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      let text = 'hero';
       let i = 0;
       const interval = setInterval(() => {
-        setQuery(text.slice(0, i));
+        setQuery(keyword.slice(0, i + 1));
         i++;
-        if (i > text.length) {
+        if (i >= keyword.length) {
           clearInterval(interval);
           setShowResults(true);
         }
@@ -21,6 +21,24 @@ export function Scene2Search() {
     }, 1500);
     return () => clearTimeout(timer);
   }, []);
+
+  const highlightText = (text: string, highlight: string) => {
+    if (!highlight) return text;
+    const parts = text.split(new RegExp(`(${highlight})`, 'gi'));
+    return (
+      <span>
+        {parts.map((part, i) => 
+          part.toLowerCase() === highlight.toLowerCase() ? (
+            <span key={i} className="text-[#1D8A77] bg-[#1D8A77]/10 px-0.5 rounded border-b border-[#1D8A77]/50 font-black">
+              {part}
+            </span>
+          ) : (
+            <span key={i}>{part}</span>
+          )
+        )}
+      </span>
+    );
+  };
 
   return (
     <motion.div
@@ -51,7 +69,7 @@ export function Scene2Search() {
       >
         <div className="p-[1vw] border-b border-slate-800 flex items-center gap-[1vw] bg-[#0F172A]">
           <Search className="w-[1.2vw] h-[1.2vw] text-slate-500" />
-          <div className="flex-1 text-[1.4vw] font-bold text-white font-mono tracking-tight">
+          <div className="flex-1 text-[1.4vw] font-bold text-white font-mono tracking-tight flex items-center">
             {query}
             <motion.span animate={{ opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 0.8 }} className="inline-block w-[0.2vw] h-[1.4vw] bg-[#1D8A77] ml-1.5 align-middle" />
           </div>
@@ -68,7 +86,7 @@ export function Scene2Search() {
               {[
                 { icon: ImageIcon, title: 'Hero_Banner.jpg', type: 'Media', color: 'text-emerald-400' },
                 { icon: FileText, title: 'Home Page', type: 'Page', color: 'text-blue-400' },
-                { icon: User, title: 'Admin', type: 'User', color: 'text-purple-400' },
+                { icon: User, title: 'Admin User', type: 'User', color: 'text-purple-400' },
               ].map((item, idx) => (
                 <motion.div 
                   key={idx}
@@ -81,7 +99,9 @@ export function Scene2Search() {
                     <item.icon className={`w-[clamp(15px,1.5vw,22px)] h-[clamp(15px,1.5vw,22px)] ${item.color}`} />
                   </div>
                   <div className="flex-1">
-                    <div className="text-[clamp(0.8rem,1.3vw,1.1rem)] font-bold text-white">{item.title}</div>
+                    <div className="text-[clamp(0.8rem,1.3vw,1.1rem)] font-bold text-white">
+                      {highlightText(item.title, query)}
+                    </div>
                     <div className="text-slate-500 text-[clamp(7px,0.8vw,10px)] font-black uppercase tracking-[0.2em]">{item.type}</div>
                   </div>
                 </motion.div>
