@@ -15,13 +15,13 @@ export function Scene3Inspector() {
 
   return (
     <motion.div
-      className="absolute inset-0 bg-[#F1F5F9] flex flex-col items-center justify-center overflow-hidden p-12"
+      className="absolute inset-0 bg-[#F1F5F9] flex flex-col items-center justify-center overflow-hidden p-[4vw]"
       initial={{ scale: 1.1, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full max-w-6xl bg-white rounded-[2rem] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.2)] border border-slate-200 overflow-hidden relative flex flex-col h-[75vh]">
+      <div className="w-full max-w-6xl bg-white rounded-[2rem] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.2)] border border-slate-200 overflow-hidden relative flex flex-col h-[70vh]">
         <div className="h-12 bg-slate-50 border-b border-slate-200 flex items-center px-6 gap-2">
           <div className="flex gap-2">
             <div className="w-3.5 h-3.5 rounded-full bg-[#FF5F56] shadow-sm" />

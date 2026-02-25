@@ -21,7 +21,7 @@ export function Scene1Pain() {
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="w-full max-w-3xl bg-[#1E293B] rounded-2xl shadow-2xl overflow-hidden border border-slate-700 aspect-video relative">
+      <div className="w-[90%] max-w-3xl bg-[#1E293B] rounded-2xl shadow-2xl overflow-hidden border border-slate-700 aspect-video relative">
         <div className="h-8 bg-[#0F172A] flex items-center px-4 gap-1.5 border-b border-slate-800">
           <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
           <div className="w-2.5 h-2.5 rounded-full bg-amber-500/50" />

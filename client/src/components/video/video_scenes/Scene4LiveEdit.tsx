@@ -63,7 +63,7 @@ border-radius: 16px;`;
     >
       <div className="w-full max-w-7xl flex gap-12 items-center h-full relative">
         {/* Live Preview Side */}
-        <div className="flex-1 flex flex-col items-center justify-center min-h-[500px] relative z-10">
+        <div className="flex-1 flex flex-col items-center justify-center min-h-[50vh] relative z-10">
            <motion.h1 
             className="text-8xl font-black text-center tracking-tighter leading-none transition-all duration-300"
             animate={{
@@ -89,7 +89,7 @@ border-radius: 16px;`;
         {/* PRO Dark Panel with Layout Morph */}
         <motion.div 
           layoutId="inspector-panel"
-          className="w-[500px] bg-[#1E293B] rounded-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.6)] border border-slate-700 overflow-hidden text-white flex flex-col h-[650px] relative z-20"
+          className="w-[35%] max-w-[500px] bg-[#1E293B] rounded-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.6)] border border-slate-700 overflow-hidden text-white flex flex-col h-[50vh] max-h-[650px] relative z-20"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: 'spring', damping: 25 }}

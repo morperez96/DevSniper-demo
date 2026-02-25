@@ -1,0 +1,64 @@
+Act as an Elite SaaS Motion UI Architect (Top 1% level, inspired by Vercel and Stripe web design). Your ultimate goal is to build a flawless, highly professional, 40-45 second automated promotional presentation using React and Framer Motion for "DevSniper PRO".
+
+CRITICAL DIRECTIVES FOR PREMIUM QUALITY:
+- Pacing: Keep it tight, dynamic, and engaging, but allow just enough time to appreciate the Live Edit magic.
+- Use advanced Framer Motion features: `spring` physics for the cursor, smooth `layout` morphing for UI panels, and satisfying `staggerChildren` for lists.
+- Aesthetics: Ultra-premium. Use subtle drop-shadows, perfect Inter typography, light pristine backgrounds, and rich Dark Slate (#1E293B) for the DevSniper UI.
+- Brand Teal: #1D8A77.
+- NEW: Clearly separate the features list (Scene 5) from the final CTA buttons (Scene 6).
+
+=== THE MASTERPIECE STORYBOARD ===
+
+Scene 1: The Developer's Pain (0s - 7s)
+- UI: A miniaturized macOS window displaying a stylized, complex DOM tree and raw CSS (Dark Slate & Teal).
+- Action: Cursor moves hesitantly around nested `<div>`s.
+- Typography: "Still wasting hours digging through the DOM?"
+- Transition: The macOS window smoothly scales down and fades out.
+
+Scene 2: The Command Palette Search (7s - 14s)
+- Transition: Smooth crossfade to a subtly blurred WordPress wp-admin dashboard mockup.
+- Action: "Cmd + K" keystroke visually pops up.
+- UI Reveal: The DevSniper Command Palette snaps into the center.
+- Simulation: Auto-type "hero". Instantly populate 3 categorized rows with icons (Lucide): [Image] Hero_Banner.jpg | [FileText] Home Page | [User] Admin.
+- Typography: "Global Admin Search. Find anything in milliseconds."
+
+Scene 3: The Target Inspector (14s - 22s)
+- Transition: Cinematic zoom into a full-size realistic macOS browser frame showing a pristine modern webpage.
+- Action: Cursor morphs into the DevSniper Teal Target Crosshair (`<Target />`).
+- Animation: Crosshair hovers over a button (Teal border + Tooltip), then glides to the massive Hero Title (Teal border + Tooltip).
+- Typography: "Bring the Inspector into your frontend."
+
+Scene 4: The Core Magic - Live Edit & Sync (22s - 34s)
+- Action: Crosshair clicks the Hero Title. Tooltip elegantly morphs into the full DevSniper PRO floating Dark UI Panel.
+- Live Text Edit: Switch to "Text" tab. Auto-type: "The Ultimate Developer Workflow". The massive Hero Title changes IN REAL TIME.
+- Live CSS Edit: Switch to "CSS" tab. Auto-type slowly enough to read:
+  `color: #1D8A77;`
+  `background: #f0fdfa;`
+  `padding: 20px 40px;`
+  `border-radius: 16px;`
+  The Title visually transforms with every line.
+- Action: Cursor clicks a glowing Teal "Save" button. Checkmark appears.
+- Typography: "PRO: Live Edit Text & CSS. Zero Context Switching."
+
+Scene 5: The Ultimate Value Grid (34s - 40s)
+- Transition: Sweep to a pristine white/teal gradient background. The browser frame disappears.
+- UI: A clean 2x4 grid (8 items) of features pops in with a satisfying cascade stagger animation:
+  1. "✓ Live Text & CSS Editing"
+  2. "✓ Zero Frontend Bloat"
+  3. "✓ Team Shared Favorites"
+  4. "✓ Global Admin Search"
+  5. "✓ Elementor Data Sync"
+  6. "✓ Native WordPress UI"
+  7. "✓ One-Click Copy Paths"
+  8. "✓ Smart Cache Clearing"
+
+Scene 6: The Closing CTA (40s - 45s) [NEW SCENE]
+- Transition: The features grid fades out smoothly, leaving the clean background.
+- UI Reveal: The DevSniper Logo (Target Magnifying Glass) scales up slightly in the center.
+- Final Hero Text (Massive & Bold): "Stop Searching. Start Snipping."
+- Action: Two premium buttons elegantly fade and slide up from below: [ Get DevSniper Free ] (Outline/Ghost style) and [ Upgrade to PRO ] (Solid Teal).
+
+=== TECHNICAL REQUIREMENTS ===
+1. Tech: React, Tailwind CSS, Framer Motion, Lucide React.
+2. Write the complete, production-ready, highly polished component. If you reach the output limit, stop and wait for me to say "continue".
+3. Ensure absolute clean separation between Scene 5 (Features) and Scene 6 (CTA).
