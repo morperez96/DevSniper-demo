@@ -2,25 +2,25 @@
 
 /* REPLACE THESE -- define your own palette and fonts for each video */
 :root {
-  --color-primary: #000000;
-  --color-secondary: #6B7280;
-  --color-accent: #3B82F6;
+  --color-primary: #1D8A77; /* DevSniper Teal/Green */
+  --color-secondary: #0A192F; /* Deep navy background */
+  --color-accent: #92003B; /* Elementor Pink */
 
-  --color-bg-light: #FFFFFF;
-  --color-bg-dark: #0F172A;
-  --color-bg-muted: #F8FAFC;
+  --color-bg-light: #F8FAFC;
+  --color-bg-dark: #0A192F;
+  --color-bg-muted: #1E293B;
 
-  --color-text-primary: #111827;
-  --color-text-secondary: #6B7280;
-  --color-text-muted: #9CA3AF;
-  --color-text-inverse: #FFFFFF;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #9CA3AF;
+  --color-text-muted: #64748B;
+  --color-text-inverse: #0F172A;
 
   --color-success: #10B981;
   --color-warning: #F59E0B;
   --color-error: #EF4444;
 
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Roboto', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
 

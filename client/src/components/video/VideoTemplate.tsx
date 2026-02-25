@@ -1,29 +1,36 @@
-// Video Template - Replace ReplitLoadingScene with your scenes
-
 import { AnimatePresence } from 'framer-motion';
 import { useVideoPlayer } from '@/lib/video';
-import { ReplitLoadingScene } from './ReplitLoadingScene';
+import { Scene1Problem } from './video_scenes/Scene1Problem';
+import { Scene2Solution } from './video_scenes/Scene2Solution';
+import { Scene3Superpower } from './video_scenes/Scene3Superpower';
+import { Scene4Sync } from './video_scenes/Scene4Sync';
+import { Scene5CTA } from './video_scenes/Scene5CTA';
 
 const SCENE_DURATIONS = {
-  loading: 99999999,
+  problem: 4000,
+  solution: 6000,
+  superpower: 8000,
+  sync: 6000,
+  cta: 6000,
 };
 
 export default function VideoTemplate() {
   const { currentScene } = useVideoPlayer({
     durations: SCENE_DURATIONS,
+    loop: true,
   });
 
   return (
     <div
       className="w-full h-screen overflow-hidden relative"
-      style={{ backgroundColor: 'var(--color-bg-light)' }}
+      style={{ backgroundColor: 'var(--color-bg-dark)' }}
     >
-      {/* mode="wait" = sequential, "sync" = simultaneous, "popLayout" = new snaps in while old animates out */}
-      <AnimatePresence>
-        {/* Replace this with your scenes */}
-        {currentScene === 0 && (
-          <ReplitLoadingScene key="loading" />
-        )}
+      <AnimatePresence mode="wait">
+        {currentScene === 0 && <Scene1Problem key="scene1" />}
+        {currentScene === 1 && <Scene2Solution key="scene2" />}
+        {currentScene === 2 && <Scene3Superpower key="scene3" />}
+        {currentScene === 3 && <Scene4Sync key="scene4" />}
+        {currentScene === 4 && <Scene5CTA key="scene5" />}
       </AnimatePresence>
     </div>
   );
