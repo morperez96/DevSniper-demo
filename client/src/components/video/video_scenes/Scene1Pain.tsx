@@ -31,8 +31,8 @@ export function Scene1Pain() {
         transition={{ delay: 0.4, duration: 0.8 }}
       >
         <h2 className="text-heading-lg font-black text-slate-900 tracking-tight max-w-[80vw] mx-auto leading-tight">
-          Still wasting time hunting for CSS classes?<br/>
-          Edit directly on your site in milliseconds.
+          Tired of digging through code?<br/>
+          Edit your site instantly.
         </h2>
       </motion.div>
 
