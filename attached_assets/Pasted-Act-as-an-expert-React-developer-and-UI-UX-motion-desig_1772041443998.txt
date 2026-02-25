@@ -1,0 +1,58 @@
+Act as an expert React developer and UI/UX motion designer. Your task is to build an automated, sequential animated presentation that acts as a promotional explainer video for a WordPress plugin ecosystem called "DevSniper" and "DevSniper PRO". 
+
+I will use this web app to screen-record a promotional video. 
+
+Tech Stack required:
+- React
+- Tailwind CSS (for styling)
+- Framer Motion (crucial for sequencing, timing, and smooth animations)
+- Lucide React (for icons)
+
+General Design System:
+- Theme: Dark mode with a sleek, developer-focused aesthetic.
+- Colors: Deep navy/dark gray background, vibrant Teal/Green (#1D8A77 or similar) for DevSniper branding, WordPress Blue, and Elementor Pink (#92003B) for specific integrations.
+- Typography: Clean Sans-Serif (Inter or Roboto).
+- Behavior: The entire sequence should auto-play upon loading, functioning exactly like a video timeline.
+
+Storyboard & Animation Sequence (The "Video"):
+
+Scene 1: The Problem (0s - 4s)
+- Visual: A split screen. On the left, a WordPress frontend. On the right, the Elementor editor loading screen.
+- Text overlays (typing effect): "Tired of endless context switching?" -> "Inspecting... Finding the widget... Waiting for Elementor to load..."
+- Animation: Show a frustrated cursor moving back and forth. Display a red "Time Wasted" counter ticking up.
+
+Scene 2: The Solution - DevSniper Free (4s - 10s)
+- Visual: A clean frontend of a website. Suddenly, a sleek "Inspector" tool (DevSniper) is activated (cursor turns into a target/sniper icon).
+- Animation: The cursor hovers over a headline (e.g., "Mickey Mouse Event"). A beautiful tooltip pops up instantly showing: Tag (h2), Classes, Size, and DOM Path.
+- Text overlay: "Meet DevSniper. Bring the Inspector into your website."
+- Action: The cursor clicks an "Open Editor" button on the tooltip, and an Elementor icon pops up with a green checkmark. Text: "Finds the exact widget in seconds."
+
+Scene 3: The Superpower - DevSniper PRO (10s - 18s)
+- Visual: Focus on the DevSniper floating dark-mode panel. 
+- Animation: Switch to the "PRO" tabs. Show a "Text" tab and a "CSS" tab.
+- Action (Live Edit simulation): Show the cursor typing standard CSS: `color: #ff0000; border-radius: 10px;` into the DevSniper CSS panel.
+- Effect: The headline on the left side of the screen instantly changes color and gets rounded corners.
+- Text overlay (sliding in): "DevSniper PRO: Live Edit text & CSS directly on the frontend."
+
+Scene 4: The Magic Sync (18s - 24s)
+- Visual: The user clicks a glowing "Save" button on the DevSniper panel.
+- Animation: A futuristic data-flow animation (moving dots or a glowing line) moves from the DevSniper panel into an "Elementor Database" icon.
+- Text overlay: "The Magic? Auto-Sync to Elementor."
+- Details appearing rapidly: "Saves to _elementor_data" -> "Saves Custom CSS directly to widget settings" -> "No copy-pasting required."
+
+Scene 5: Value Proposition & CTA (24s - 30s)
+- Visual: A 2x2 grid fading in with icons.
+1. Clock Icon: "Save hours of debugging."
+2. Team Icon: "Perfect for Agency workflows."
+3. Rocket Icon: "Zero Frontend Bloat (No tracking)."
+4. Refresh Icon: "Smart Cache Clearing."
+- Final screen: The DevSniper Logo (Target magnifying glass) with the text: "Stop searching. Start snipping."
+- Buttons appearing: "Download Free on WordPress.org" | "Upgrade to PRO".
+
+Development Requirements for Replit:
+1. Create a main `VideoSequence` component that manages the state/timing for switching between these 5 scenes.
+2. Use `framer-motion` variants to smoothly transition between scenes (fade in/out, slide up).
+3. Build mockup UI components for the "Inspector tooltip" and the "DevSniper PRO dark panel" so they look like real software interfaces.
+4. Ensure the animation runs smoothly without user interaction after the initial load. Add a "Replay Video" button at the very end.
+
+Please generate the complete, working React code for this animated sequence.
