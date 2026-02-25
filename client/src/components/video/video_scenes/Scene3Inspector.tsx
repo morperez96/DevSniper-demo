@@ -21,35 +21,35 @@ export function Scene3Inspector() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-[90%] max-w-responsive bg-white rounded-[2rem] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.2)] border border-slate-200 overflow-hidden relative flex flex-col h-[70vh]">
-        <div className="h-[3vh] bg-slate-50 border-b border-slate-200 flex items-center px-[1.5vw] gap-[0.5vw]">
-          <div className="flex gap-[0.5vw]">
-            <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-[#FF5F56] shadow-sm" />
-            <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-[#FFBD2E] shadow-sm" />
-            <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-[#27C93F] shadow-sm" />
+      <div className="w-[70%] max-w-[55vw] bg-white rounded-[1.5rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] border border-slate-200 overflow-hidden relative flex flex-col h-[60vh]">
+        <div className="h-[2.5vh] bg-slate-50 border-b border-slate-200 flex items-center px-[1.2vw] gap-[0.4vw]">
+          <div className="flex gap-[0.4vw]">
+            <div className="w-[0.6vw] h-[0.6vw] rounded-full bg-[#FF5F56] shadow-sm" />
+            <div className="w-[0.6vw] h-[0.6vw] rounded-full bg-[#FFBD2E] shadow-sm" />
+            <div className="w-[0.6vw] h-[0.6vw] rounded-full bg-[#27C93F] shadow-sm" />
           </div>
-          <div className="mx-auto bg-slate-200 h-[1.5vh] w-[15vw] rounded-lg shadow-inner" />
+          <div className="mx-auto bg-slate-200 h-[1.2vh] w-[12vw] rounded-md shadow-inner" />
         </div>
 
-        <div className="flex-1 flex flex-col items-center justify-center text-center gap-[5vh] bg-white relative p-[3vw]">
-          <div className="max-w-[80vw] space-y-[2vh]">
+        <div className="flex-1 flex flex-col items-center justify-center text-center gap-[4vh] bg-white relative p-[2vw]">
+          <div className="max-w-[70vw] space-y-[1.5vh]">
             <motion.h1 
-              className={`text-heading-xl font-black text-slate-900 tracking-tighter transition-all duration-500 rounded-2xl ${step === 2 ? 'ring-4 ring-[#1D8A77] bg-[#1D8A77]/5 p-4' : ''}`}
+              className={`text-[clamp(1.5rem,3.5vw,4.5rem)] font-black text-slate-900 tracking-tighter transition-all duration-500 rounded-xl ${step === 2 ? 'ring-2 ring-[#1D8A77] bg-[#1D8A77]/5 p-3' : ''}`}
             >
               Ultimate Workflow
             </motion.h1>
-            <p className="text-body-lg text-slate-500 font-medium max-w-[60vw] mx-auto leading-relaxed">
+            <p className="text-[clamp(0.8rem,1.2vw,1.4rem)] text-slate-500 font-medium max-w-[50vw] mx-auto leading-relaxed">
               Experience the future of development with DevSniper PRO. Direct frontend editing without complexity.
             </p>
           </div>
 
-          <div className="flex gap-[2vw] pointer-events-none">
+          <div className="flex gap-[1.5vw] pointer-events-none">
             <motion.div 
-              className={`px-[3vw] py-[1.2vh] bg-[#1D8A77] text-white rounded-2xl font-black text-[1.5vw] shadow-2xl transition-all duration-500 ${step === 1 ? 'ring-4 ring-[#1D8A77] ring-offset-4' : ''}`}
+              className={`px-[2.5vw] py-[1vh] bg-[#1D8A77] text-white rounded-xl font-black text-[1.2vw] shadow-xl transition-all duration-500 ${step === 1 ? 'ring-2 ring-[#1D8A77] ring-offset-2' : ''}`}
             >
               Get Started
             </motion.div>
-            <div className="px-[3vw] py-[1.2vh] bg-slate-50 text-slate-900 rounded-2xl font-black text-[1.5vw] border border-slate-200">
+            <div className="px-[2.5vw] py-[1vh] bg-slate-50 text-slate-900 rounded-xl font-black text-[1.2vw] border border-slate-200">
               Live Demo
             </div>
           </div>
@@ -58,27 +58,27 @@ export function Scene3Inspector() {
           <motion.div 
             className="absolute z-[100] pointer-events-none"
             animate={{
-              x: step === 0 ? '45vw' : step === 1 ? '-10vw' : '0vw',
-              y: step === 0 ? '30vh' : step === 1 ? '15vh' : '-10vh'
+              x: step === 0 ? '35vw' : step === 1 ? '-8vw' : '0vw',
+              y: step === 0 ? '25vh' : step === 1 ? '12vh' : '-8vh'
             }}
             transition={{ type: 'spring', damping: 20, stiffness: 80 }}
           >
-            <Target className="w-[clamp(48px,8vw,80px)] h-[clamp(48px,8vw,80px)] text-[#1D8A77] drop-shadow-[0_0_20px_rgba(29,138,119,0.5)]" strokeWidth={3} />
+            <Target className="w-[clamp(32px,5vw,56px)] h-[clamp(32px,5vw,56px)] text-[#1D8A77] drop-shadow-[0_0_15px_rgba(29,138,119,0.4)]" strokeWidth={3} />
             
             <AnimatePresence>
               {step > 0 && (
                 <motion.div 
-                  className="absolute top-[clamp(40px,5vh,80px)] left-[clamp(20px,2vw,40px)] bg-[#1E293B] p-[1.2vw] rounded-2xl border border-slate-700 shadow-2xl text-white w-[clamp(240px,20vw,320px)] backdrop-blur-md"
+                  className="absolute top-[clamp(30px,4vh,60px)] left-[clamp(15px,1.5vw,30px)] bg-[#1E293B] p-[1vw] rounded-xl border border-slate-700 shadow-xl text-white w-[clamp(180px,15vw,260px)] backdrop-blur-md"
                   initial={{ opacity: 0, scale: 0.8, y: 10 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 1.1 }}
                   key={step}
                 >
-                  <div className="flex justify-between items-center mb-[1vh] pb-[0.5vh] border-b border-slate-800">
-                    <span className="text-[clamp(8px,1vw,12px)] font-black uppercase tracking-widest text-slate-500">Inspector</span>
-                    <span className="text-[clamp(8px,1vw,12px)] bg-[#1D8A77] px-[0.5vw] py-[0.2vh] rounded font-bold">PRO</span>
+                  <div className="flex justify-between items-center mb-[0.8vh] pb-[0.4vh] border-b border-slate-800">
+                    <span className="text-[clamp(7px,0.8vw,10px)] font-black uppercase tracking-widest text-slate-500">Inspector</span>
+                    <span className="text-[clamp(7px,0.8vw,10px)] bg-[#1D8A77] px-[0.4vw] py-[0.1vh] rounded font-bold">PRO</span>
                   </div>
-                  <div className="space-y-[0.5vh] font-mono text-[clamp(10px,1.2vw,14px)]">
+                  <div className="space-y-[0.4vh] font-mono text-[clamp(8px,1vw,12px)]">
                     <div className="flex justify-between items-center">
                       <span className="text-slate-500">TAG</span>
                       <span className="text-teal-400 font-bold">{step === 1 ? 'div' : 'h1'}</span>
