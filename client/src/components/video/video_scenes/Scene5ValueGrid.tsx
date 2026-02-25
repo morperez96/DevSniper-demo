@@ -51,24 +51,24 @@ export function Scene5ValueGrid() {
       <div className="absolute inset-0 bg-[radial-gradient(#1D8A77_1px,transparent_1px)] [background-size:2vw:2vw] opacity-[0.03]" />
       
       <motion.div 
-        className="z-10 w-full max-w-[90vw]"
+        className="z-10 w-full max-w-[85vw]"
         variants={container}
         initial="hidden"
         animate="show"
       >
-        <div className="grid grid-cols-4 gap-[2vw]">
+        <div className="grid grid-cols-4 gap-[1.5vw]">
           {features.map((f, i) => (
             <motion.div 
               key={i}
               variants={item}
-              className="flex flex-col items-center justify-center gap-[1vh] bg-white p-[1vw] rounded-xl border border-slate-100 shadow-md hover:shadow-lg transition-all text-center group aspect-square w-full max-w-[15vw] mx-auto"
+              className="flex flex-col items-center justify-center gap-[1.5vh] bg-white/80 backdrop-blur-sm p-[1.5vw] rounded-2xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(29,138,119,0.1)] transition-all text-center group aspect-square w-full max-w-[18vw] mx-auto"
             >
-              <div className="w-[clamp(32px,3vw,48px)] h-[clamp(32px,3vw,48px)] flex items-center justify-center group-hover:scale-110 transition-transform pointer-events-none">
-                <f.icon className="w-[clamp(16px,1.5vw,24px)] h-[clamp(16px,1.5vw,24px)] text-[#1D8A77]" strokeWidth={2.5} />
+              <div className="w-[clamp(48px,4.5vw,72px)] h-[clamp(48px,4.5vw,72px)] flex items-center justify-center bg-slate-50 rounded-2xl group-hover:scale-110 group-hover:bg-[#1D8A77]/5 transition-all duration-500 pointer-events-none mb-[0.5vh]">
+                <f.icon className="w-[clamp(24px,2.2vw,36px)] h-[clamp(24px,2.2vw,36px)] text-[#1D8A77]" strokeWidth={2} />
               </div>
-              <div className="space-y-[0.3vh]">
-                <div className="text-[clamp(0.7rem,1.1vw,0.9rem)] font-black text-slate-900 tracking-tight leading-tight px-1">{f.title}</div>
-                <div className="text-[clamp(0.5rem,0.8vw,0.7rem)] text-slate-500 font-medium leading-tight">{f.desc}</div>
+              <div className="space-y-[0.5vh]">
+                <div className="text-[clamp(0.9rem,1.3vw,1.1rem)] font-black text-slate-900 tracking-tight leading-tight px-1 uppercase">{f.title}</div>
+                <div className="text-[clamp(0.7rem,0.9vw,0.85rem)] text-slate-500 font-semibold leading-tight">{f.desc}</div>
               </div>
             </motion.div>
           ))}
