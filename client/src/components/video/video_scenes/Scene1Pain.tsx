@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import { MousePointer2 } from 'lucide-react';
+import { useState } from 'react';
 
 export function Scene1Pain() {
+  const [hoveredLine, setHoveredLine] = useState<number | null>(null);
+
   const domLines = [
     { indent: 0, tag: 'div', class: 'elementor-section-wrap' },
-    { indent: 2, tag: 'section', class: 'elementor-section element-top-section' },
+    { indent: 2, tag: 'section', class: 'element-top-section' },
     { indent: 4, tag: 'div', class: 'elementor-container elementor-column-gap-default' },
     { indent: 6, tag: 'div', class: 'elementor-column elementor-col-100' },
     { indent: 8, tag: 'div', class: 'elementor-widget-wrap elementor-element-populated' },
@@ -15,40 +18,40 @@ export function Scene1Pain() {
 
   return (
     <motion.div
-      className="absolute inset-0 bg-[#F8FAFC] flex flex-col items-center justify-center overflow-hidden"
+      className="absolute inset-0 bg-[#F8FAFC] flex flex-col items-center justify-center overflow-hidden p-[2vw]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      transition={{ duration: 0.8 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.6 }}
     >
       <motion.div 
-        className="absolute top-[3vh] left-0 right-0 text-center z-50 px-[2vw]"
-        initial={{ y: -20, opacity: 0 }}
+        className="mb-[3vh] text-center z-50 px-[2vw]"
+        initial={{ y: -15, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.8, duration: 1 }}
+        transition={{ delay: 0.4, duration: 0.8 }}
       >
-        <h2 className="text-heading-lg font-black text-slate-900 tracking-tight max-w-responsive mx-auto">
+        <h2 className="text-heading-lg font-black text-slate-900 tracking-tight max-w-[80vw] mx-auto leading-tight">
           Still wasting hours digging through the DOM?
         </h2>
       </motion.div>
 
-      <div className="w-[90%] max-w-responsive bg-[#1E293B] rounded-2xl shadow-2xl overflow-hidden border border-slate-700 aspect-video relative mt-[4vh]">
-        <div className="h-[2vh] bg-[#0F172A] flex items-center px-[1vw] gap-[0.4vw] border-b border-slate-800">
-          <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-red-500/50" />
-          <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-amber-500/50" />
-          <div className="w-[0.8vw] h-[0.8vw] rounded-full bg-emerald-500/50" />
-          <div className="ml-[1vw] text-[0.7vw] font-mono text-slate-500">Chrome DevTools - DOM Tree</div>
+      <div className="w-[90%] max-w-[80vw] bg-[#1E293B] rounded-xl shadow-xl overflow-hidden border border-slate-700 aspect-video relative">
+        <div className="h-[1.5vh] bg-[#0F172A] flex items-center px-[0.8vw] gap-[0.3vw] border-b border-slate-800">
+          <div className="w-[0.5vw] h-[0.5vw] rounded-full bg-red-500/50" />
+          <div className="w-[0.5vw] h-[0.5vw] rounded-full bg-amber-500/50" />
+          <div className="w-[0.5vw] h-[0.5vw] rounded-full bg-emerald-500/50" />
+          <div className="ml-[0.5vw] text-[clamp(8px,0.8vw,12px)] font-mono text-slate-500">Chrome DevTools</div>
         </div>
         
-        <div className="p-[2vw] font-mono text-[0.75vw] leading-relaxed">
+        <div className="p-[1.2vw] font-mono text-[clamp(8px,1vw,12px)] leading-relaxed relative h-full">
           {domLines.map((line, i) => (
             <motion.div 
               key={i}
-              className="whitespace-nowrap"
-              style={{ paddingLeft: `${line.indent * 12}px` }}
-              initial={{ opacity: 0, x: -10 }}
+              className={`whitespace-nowrap transition-colors duration-200 px-[0.5vw] rounded ${hoveredLine === i ? 'bg-slate-700/50' : ''}`}
+              style={{ paddingLeft: `calc(${line.indent * 1.2}vw + 0.5vw)` }}
+              initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5 + i * 0.1 }}
+              transition={{ delay: 0.3 + i * 0.08 }}
             >
               <span className="text-slate-500">&lt;</span>
               <span className="text-teal-400">{line.tag}</span>
@@ -57,11 +60,10 @@ export function Scene1Pain() {
               <span className="text-slate-500">&gt;</span>
             </motion.div>
           ))}
-          <div className="mt-8 pt-8 border-t border-slate-800">
-            <div className="text-slate-500 italic">// CSS Styles</div>
-            <div className="text-blue-400">.elementor-123 .elementor-element-abc {'{'}</div>
-            <div className="pl-4 text-emerald-400">display: flex;</div>
-            <div className="pl-4 text-emerald-400">margin-top: calc(var(--spacer-size) * -1);</div>
+          <div className="mt-4 pt-4 border-t border-slate-800 px-2 opacity-60">
+            <div className="text-slate-500 italic text-[9px] mb-1">// CSS Styles</div>
+            <div className="text-blue-400">.elementor-123 .elementor-element {'{'}</div>
+            <div className="pl-3 text-emerald-400">display: flex;</div>
             <div className="text-blue-400">{'}'}</div>
           </div>
         </div>
@@ -69,12 +71,21 @@ export function Scene1Pain() {
         <motion.div
           className="absolute z-50 pointer-events-none"
           animate={{ 
-            x: [100, 400, 200, 500, 150, 300], 
-            y: [50, 150, 100, 200, 80, 120] 
+            x: [50, 350, 150, 450, 100, 250], 
+            y: [40, 120, 80, 160, 60, 100] 
           }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          onUpdate={(latest: any) => {
+            const y = latest.y;
+            const lineIndex = Math.floor((y - 20) / 16);
+            if (lineIndex >= 0 && lineIndex < domLines.length) {
+              setHoveredLine(lineIndex);
+            } else {
+              setHoveredLine(null);
+            }
+          }}
         >
-          <MousePointer2 className="w-10 h-10 text-white fill-white drop-shadow-xl opacity-80" />
+          <MousePointer2 className="w-7 h-7 text-white fill-white drop-shadow-lg opacity-90" />
         </motion.div>
       </div>
     </motion.div>

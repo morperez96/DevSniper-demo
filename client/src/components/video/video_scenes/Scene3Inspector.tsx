@@ -63,22 +63,22 @@ export function Scene3Inspector() {
             }}
             transition={{ type: 'spring', damping: 20, stiffness: 80 }}
           >
-            <Target className="w-16 h-16 text-[#1D8A77] drop-shadow-[0_0_20px_rgba(29,138,119,0.5)]" strokeWidth={3} />
+            <Target className="w-[clamp(48px,8vw,80px)] h-[clamp(48px,8vw,80px)] text-[#1D8A77] drop-shadow-[0_0_20px_rgba(29,138,119,0.5)]" strokeWidth={3} />
             
             <AnimatePresence>
               {step > 0 && (
                 <motion.div 
-                  className="absolute top-14 left-8 bg-[#1E293B] p-5 rounded-2xl border border-slate-700 shadow-2xl text-white w-72 backdrop-blur-md"
+                  className="absolute top-[clamp(40px,5vh,80px)] left-[clamp(20px,2vw,40px)] bg-[#1E293B] p-[1.2vw] rounded-2xl border border-slate-700 shadow-2xl text-white w-[clamp(240px,20vw,320px)] backdrop-blur-md"
                   initial={{ opacity: 0, scale: 0.8, y: 10 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 1.1 }}
                   key={step}
                 >
-                  <div className="flex justify-between items-center mb-3 pb-2 border-b border-slate-800">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">Inspector</span>
-                    <span className="text-[10px] bg-[#1D8A77] px-2 py-0.5 rounded font-bold">PRO</span>
+                  <div className="flex justify-between items-center mb-[1vh] pb-[0.5vh] border-b border-slate-800">
+                    <span className="text-[clamp(8px,1vw,12px)] font-black uppercase tracking-widest text-slate-500">Inspector</span>
+                    <span className="text-[clamp(8px,1vw,12px)] bg-[#1D8A77] px-[0.5vw] py-[0.2vh] rounded font-bold">PRO</span>
                   </div>
-                  <div className="space-y-2 font-mono text-[11px]">
+                  <div className="space-y-[0.5vh] font-mono text-[clamp(10px,1.2vw,14px)]">
                     <div className="flex justify-between items-center">
                       <span className="text-slate-500">TAG</span>
                       <span className="text-teal-400 font-bold">{step === 1 ? 'div' : 'h1'}</span>

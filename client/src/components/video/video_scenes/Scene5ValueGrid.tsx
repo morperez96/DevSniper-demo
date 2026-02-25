@@ -3,14 +3,14 @@ import { CheckCircle2, Zap, Users, Search, Database, Layout, Clipboard, RefreshC
 
 export function Scene5ValueGrid() {
   const features = [
-    { title: "Live Text & CSS Editing", icon: RefreshCw },
-    { title: "Zero Frontend Bloat", icon: Zap },
-    { title: "Team Shared Favorites", icon: Users },
-    { title: "Global Admin Search", icon: Search },
-    { title: "Elementor Data Sync", icon: Database },
-    { title: "Native WordPress UI", icon: Layout },
-    { title: "One-Click Copy Paths", icon: Clipboard },
-    { title: "Smart Cache Clearing", icon: RefreshCw },
+    { title: "Live Edit", icon: RefreshCw },
+    { title: "Zero Bloat", icon: Zap },
+    { title: "Team Favs", icon: Users },
+    { title: "Admin Search", icon: Search },
+    { title: "Data Sync", icon: Database },
+    { title: "Native UI", icon: Layout },
+    { title: "Copy Paths", icon: Clipboard },
+    { title: "Cache Clear", icon: RefreshCw },
   ];
 
   const container = {
@@ -18,14 +18,14 @@ export function Scene5ValueGrid() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.08,
         delayChildren: 0.2
       }
     }
   };
 
   const item = {
-    hidden: { y: 20, opacity: 0, scale: 0.95 },
+    hidden: { y: 15, opacity: 0, scale: 0.95 },
     show: { 
       y: 0, 
       opacity: 1, 
@@ -36,15 +36,15 @@ export function Scene5ValueGrid() {
 
   return (
     <motion.div
-      className="absolute inset-0 bg-white flex flex-col items-center justify-center overflow-hidden"
+      className="absolute inset-0 bg-white flex flex-col items-center justify-center overflow-hidden p-[3vw]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, y: -20 }}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(#1D8A77_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.03]" />
+      <div className="absolute inset-0 bg-[radial-gradient(#1D8A77_1px,transparent_1px)] [background-size:2vw:2vw] opacity-[0.03]" />
       
       <motion.div 
-        className="z-10 w-full max-w-responsive px-[3vw]"
+        className="z-10 w-full max-w-[90vw]"
         variants={container}
         initial="hidden"
         animate="show"
@@ -54,12 +54,12 @@ export function Scene5ValueGrid() {
             <motion.div 
               key={i}
               variants={item}
-              className="flex flex-col items-center gap-[1.5vw] bg-white p-[2vw] rounded-[2rem] border border-slate-100 shadow-xl hover:shadow-2xl transition-all text-center group"
+              className="flex flex-col items-center gap-[1.5vh] bg-white p-[1.5vw] rounded-2xl border border-slate-100 shadow-md hover:shadow-lg transition-all text-center group"
             >
-              <div className="w-[4vw] h-[4vw] rounded-2xl bg-[#1D8A77]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <f.icon className="w-[2vw] h-[2vw] text-[#1D8A77]" strokeWidth={2.5} />
+              <div className="w-[clamp(40px,4vw,60px)] h-[clamp(40px,4vw,60px)] rounded-xl bg-[#1D8A77]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <f.icon className="w-[clamp(20px,2vw,30px)] h-[clamp(20px,2vw,30px)] text-[#1D8A77]" strokeWidth={2.5} />
               </div>
-              <span className="text-[1.2vw] font-black text-slate-900 tracking-tight leading-tight">{f.title}</span>
+              <span className="text-[clamp(0.75rem,1.5vw,1rem)] font-black text-slate-900 tracking-tight leading-tight">{f.title}</span>
             </motion.div>
           ))}
         </div>

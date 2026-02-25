@@ -1,0 +1,49 @@
+Act as an Elite SaaS Motion UI Architect. We need to FIX the sizing and layout issues in the previous React + Framer Motion presentation for DevSniper.
+
+CRITICAL FIXES - REVERT SIZING AND FIX LAYOUTS:
+1. REVERT TO NORMAL, COMPACT SIZES: The previous iteration made everything way too massive. Scale down ALL fonts, UI panels, browser frames, and cards back to a sleek, compact, and professional standard SaaS size. Do not oversize elements.
+2. SCENE 1 LAYOUT & CODE HOVER:
+   - Layout: The Title ("Still wasting hours...") must sit cleanly ABOVE the macOS window, NOT overlapping it. Use proper flexbox/grid spacing.
+   - Size: The macOS window containing the messy code must be scaled down.
+   - New Animation: Add a simulated hover effect to the code. As the frantic cursor moves over the DOM lines, make the code lines briefly highlight (change background color slightly) to show the user is struggling and inspecting different lines, not knowing what to choose.
+3. PREVENT ALL CUTOFFS (ZERO CLIPPING): Ensure NO section is cut off at the bottom. The entire presentation must fit perfectly within a standard container (e.g., max-w-5xl, aspect-video). Specifically in Scene 4, scale down the floating PRO panel so the ENTIRE panel, including the Save button, is fully visible on screen.
+
+=== THE REFINED STORYBOARD ===
+
+Scene 1: The Developer's Pain (0s - 7s)
+- UI: Clean flex layout. Top: The Title text. Below it: A compact macOS window with a messy DOM tree and CSS.
+- Action: Frantic cursor moves over the code.
+- Animation: The code lines highlight (hover effect) as the cursor passes over them, showing confusion.
+
+Scene 2: The Command Palette Search (7s - 14s)
+- Transition: Crossfade to blurred WordPress wp-admin.
+- UI Reveal: The DevSniper Command Palette snaps open (Compact, normal size).
+- Simulation: Auto-type "hero". Shows 3 normal-sized rows: [Image] Hero_Banner.jpg | [FileText] Home Page | [User] Admin.
+
+Scene 3: The Target Inspector (14s - 22s)
+- Transition: Zoom into a properly scaled macOS browser frame.
+- Action: Cursor morphs into the Teal Target Crosshair (`<Target />`).
+- Animation: Crosshair hovers over a button (Teal border + Tooltip), then glides to the Hero Title (Teal border + Tooltip).
+
+Scene 4: The Core Magic - Live Edit & Sync (22s - 34s)
+- Action: Crosshair clicks the Hero Title. Tooltip morphs into the DevSniper PRO Panel.
+- *CRITICAL FIX:* The PRO Panel must be compact enough that it fits entirely inside the view without cutting off the bottom "Save" button.
+- Live Text Edit: Auto-type: "The Ultimate Developer Workflow". Background Title updates IN REAL TIME.
+- Live CSS Edit: Auto-type: `color: #1D8A77; background: #f0fdfa; border-radius: 12px;`. Visuals transform.
+- Action: Cursor clicks glowing Teal "Save". Checkmark appears.
+
+Scene 5: The Ultimate Value Grid (34s - 40s)
+- Transition: Sweep to pristine white/teal background.
+- UI: A 2x4 grid of 8 feature cards. 
+- *CRITICAL FIX:* Revert these cards to a normal, elegant size. Include the Lucide icons, but keep the grid perfectly proportioned and compact.
+
+Scene 6: The Closing CTA (40s - 45s)
+- Transition: Features fade out.
+- UI Reveal: DevSniper Logo scales up cleanly.
+- Final Text: "Stop Searching. Start Snipping."
+- Action: Two standard-sized premium buttons fade up.
+
+=== TECHNICAL REQUIREMENTS ===
+1. Tech: React, Tailwind CSS, Framer Motion, Lucide React.
+2. Focus heavily on container constraints (`overflow-hidden`, `max-h-screen`, `aspect-video`) to ensure nothing gets cropped or cut off on smaller screens.
+3. DO NOT TRUNCATE THE CODE. If you hit the length limit, stop and wait for "continue".

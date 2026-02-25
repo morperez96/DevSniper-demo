@@ -44,7 +44,7 @@ export function Scene2Search() {
       </motion.div>
 
       <motion.div 
-        className="w-[90%] max-w-[70vw] bg-[#1E293B] rounded-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] border border-slate-700 overflow-hidden z-20"
+        className="w-[90%] max-w-[85vw] bg-[#1E293B] rounded-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] border border-slate-700 overflow-hidden z-20"
         initial={{ y: 100, opacity: 0, scale: 0.9 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
         transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.2 }}
@@ -72,17 +72,17 @@ export function Scene2Search() {
               ].map((item, idx) => (
                 <motion.div 
                   key={idx}
-                  className="flex items-center gap-5 p-4 rounded-2xl bg-slate-800/40 border border-transparent hover:border-slate-700 transition-all"
+                  className="flex items-center gap-[1vw] p-[1vw] rounded-2xl bg-slate-800/40 border border-transparent hover:border-slate-700 transition-all"
                   initial={{ x: -30, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: idx * 0.15 }}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center shadow-lg">
-                    <item.icon className={`w-6 h-6 ${item.color}`} />
+                  <div className="w-[clamp(40px,4vw,60px)] h-[clamp(40px,4vw,60px)] rounded-xl bg-slate-900 flex items-center justify-center shadow-lg">
+                    <item.icon className={`w-[clamp(20px,2vw,30px)] h-[clamp(20px,2vw,30px)] ${item.color}`} />
                   </div>
                   <div className="flex-1">
-                    <div className="text-lg font-bold text-white">{item.title}</div>
-                    <div className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em]">{item.type}</div>
+                    <div className="text-[clamp(0.9rem,1.8vw,1.2rem)] font-bold text-white">{item.title}</div>
+                    <div className="text-slate-500 text-[clamp(8px,1vw,12px)] font-black uppercase tracking-[0.2em]">{item.type}</div>
                   </div>
                 </motion.div>
               ))}
