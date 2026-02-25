@@ -20,6 +20,90 @@ export function Scene1Pain() {
     { indent: 11, tag: 'h2', class: 'elementor-heading-title' },
     { indent: 12, tag: 'div', class: 'elementor-text-editor' },
     { indent: 13, tag: 'p', class: 'description' },
+    { indent: 11, tag: 'div', class: 'elementor-spacer' },
+    { indent: 12, tag: 'div', class: 'elementor-spacer-inner' },
+    { indent: 10, tag: 'div', class: 'elementor-image' },
+    { indent: 11, tag: 'figure', class: 'wp-caption' },
+    { indent: 12, tag: 'img', class: 'attachment-large' },
+    { indent: 9, tag: 'div', class: 'elementor-button-wrapper' },
+    { indent: 10, tag: 'a', class: 'elementor-button' },
+    { indent: 11, tag: 'span', class: 'elementor-button-content-wrapper' },
+    { indent: 12, tag: 'span', class: 'elementor-button-text' },
+    { indent: 8, tag: 'div', class: 'elementor-divider' },
+    { indent: 9, tag: 'span', class: 'elementor-divider-separator' },
+    { indent: 7, tag: 'div', class: 'elementor-social-icons-wrapper' },
+    { indent: 8, tag: 'div', class: 'elementor-social-icon' },
+    { indent: 9, tag: 'i', class: 'fab fa-facebook' },
+    { indent: 10, tag: 'span', class: 'elementor-screen-only' },
+    { indent: 6, tag: 'div', class: 'elementor-icon-list-items' },
+    { indent: 7, tag: 'li', class: 'elementor-icon-list-item' },
+    { indent: 8, tag: 'span', class: 'elementor-icon-list-text' },
+    { indent: 5, tag: 'div', class: 'elementor-posts-container' },
+    { indent: 6, tag: 'article', class: 'elementor-post' },
+    { indent: 7, tag: 'div', class: 'elementor-post__card' },
+    { indent: 8, tag: 'div', class: 'elementor-post__thumbnail' },
+    { indent: 9, tag: 'img', class: 'attachment-medium' },
+    { indent: 8, tag: 'div', class: 'elementor-post__text' },
+    { indent: 9, tag: 'h3', class: 'elementor-post__title' },
+    { indent: 10, tag: 'a', class: 'elementor-post__link' },
+    { indent: 9, tag: 'div', class: 'elementor-post__excerpt' },
+    { indent: 10, tag: 'p', class: 'excerpt-content' },
+    { indent: 4, tag: 'div', class: 'elementor-widget-wrap' },
+    { indent: 5, tag: 'div', class: 'elementor-widget' },
+    { indent: 6, tag: 'div', class: 'elementor-widget-container' },
+    { indent: 7, tag: 'form', class: 'elementor-form' },
+    { indent: 8, tag: 'div', class: 'elementor-form-fields-wrapper' },
+    { indent: 9, tag: 'div', class: 'elementor-field-group' },
+    { indent: 10, tag: 'label', class: 'elementor-field-label' },
+    { indent: 11, tag: 'input', class: 'elementor-field-text' },
+    { indent: 9, tag: 'div', class: 'elementor-field-group' },
+    { indent: 10, tag: 'button', class: 'elementor-button' },
+    { indent: 3, tag: 'div', class: 'elementor-column elementor-col-50' },
+    { indent: 4, tag: 'div', class: 'elementor-widget-wrap' },
+    { indent: 5, tag: 'div', class: 'elementor-widget-image' },
+    { indent: 6, tag: 'div', class: 'elementor-widget-container' },
+    { indent: 7, tag: 'img', class: 'wp-post-image' },
+    { indent: 5, tag: 'div', class: 'elementor-widget-heading' },
+    { indent: 6, tag: 'h2', class: 'elementor-heading-title' },
+    { indent: 4, tag: 'div', class: 'elementor-widget-wrap' },
+    { indent: 5, tag: 'div', class: 'elementor-widget-text' },
+    { indent: 6, tag: 'div', class: 'elementor-widget-container' },
+    { indent: 7, tag: 'p', class: 'footer-text' },
+    { indent: 3, tag: 'div', class: 'elementor-column elementor-col-33' },
+    { indent: 4, tag: 'div', class: 'elementor-widget-icon' },
+    { indent: 5, tag: 'div', class: 'elementor-widget-container' },
+    { indent: 6, tag: 'i', class: 'fa fa-envelope' },
+    { indent: 7, tag: 'span', class: 'elementor-icon-text' },
+    { indent: 0, tag: 'footer', class: 'site-footer' },
+    { indent: 1, tag: 'div', class: 'footer-widgets' },
+    { indent: 2, tag: 'section', class: 'widget-area' },
+    { indent: 3, tag: 'aside', class: 'widget' },
+    { indent: 4, tag: 'h3', class: 'widget-title' },
+    { indent: 5, tag: 'div', class: 'elementor-widget-container' },
+    { indent: 6, tag: 'ul', class: 'elementor-icon-list-items' },
+    { indent: 7, tag: 'li', class: 'elementor-icon-list-item' },
+    { indent: 8, tag: 'a', class: 'elementor-icon-list-link' },
+    { indent: 9, tag: 'span', class: 'elementor-icon-list-text' },
+    { indent: 5, tag: 'div', class: 'elementor-widget-divider' },
+    { indent: 6, tag: 'div', class: 'elementor-divider' },
+    { indent: 7, tag: 'span', class: 'elementor-divider-separator' },
+    { indent: 3, tag: 'div', class: 'elementor-column elementor-col-25' },
+    { indent: 4, tag: 'div', class: 'elementor-widget-wrap' },
+    { indent: 5, tag: 'div', class: 'elementor-widget-image-box' },
+    { indent: 6, tag: 'div', class: 'elementor-image-box-wrapper' },
+    { indent: 7, tag: 'figure', class: 'elementor-image-box-img' },
+    { indent: 8, tag: 'img', class: 'attachment-thumbnail' },
+    { indent: 7, tag: 'div', class: 'elementor-image-box-content' },
+    { indent: 8, tag: 'h3', class: 'elementor-image-box-title' },
+    { indent: 9, tag: 'p', class: 'elementor-image-box-description' },
+    { indent: 0, tag: 'section', class: 'elementor-section-footer' },
+    { indent: 1, tag: 'div', class: 'elementor-container' },
+    { indent: 2, tag: 'div', class: 'elementor-row' },
+    { indent: 3, tag: 'div', class: 'elementor-column' },
+    { indent: 4, tag: 'div', class: 'elementor-widget-wrap' },
+    { indent: 5, tag: 'div', class: 'elementor-widget-text-editor' },
+    { indent: 6, tag: 'div', class: 'elementor-widget-container' },
+    { indent: 7, tag: 'p', class: 'copyright-notice' },
   ];
 
   return (
@@ -50,7 +134,7 @@ export function Scene1Pain() {
           <div className="ml-[0.5vw] text-[clamp(6px,0.6vw,10px)] font-mono text-slate-500">Chrome DevTools</div>
         </div>
         
-        <div className="p-[1vw] font-mono text-[clamp(6px,0.7vw,10px)] leading-tight relative h-full">
+        <div className="p-[1vw] font-mono text-[clamp(5px,0.55vw,8px)] leading-tight relative h-full">
           {domLines.map((line, i) => (
             <motion.div 
               key={i}
@@ -58,7 +142,7 @@ export function Scene1Pain() {
               style={{ paddingLeft: `calc(${line.indent * 1.2}vw + 0.5vw)` }}
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 + i * 0.08 }}
+              transition={{ delay: 0.3 + i * 0.04 }}
             >
               <span className="text-slate-500">&lt;</span>
               <span className="text-teal-400">{line.tag}</span>
@@ -68,7 +152,7 @@ export function Scene1Pain() {
             </motion.div>
           ))}
           <div className="mt-4 pt-4 border-t border-slate-800 px-2 opacity-60">
-            <div className="text-slate-500 italic text-[9px] mb-1">// CSS Styles</div>
+            <div className="text-slate-500 italic text-[8px] mb-1">// CSS Styles</div>
             <div className="text-blue-400">.elementor-123 .elementor-element {'{'}</div>
             <div className="pl-3 text-emerald-400">display: flex;</div>
             <div className="text-blue-400">{'}'}</div>
@@ -78,18 +162,18 @@ export function Scene1Pain() {
         <motion.div
           className="absolute z-50 pointer-events-none"
           animate={{ 
-            x: [20, 100, 40, 140, 60, 160, 80, 180, 100, 200], 
-            y: [20, 40, 60, 80, 100, 120, 140, 160, 180, 200] 
+            x: [20, 150, 40, 200, 60, 250, 80, 280, 100, 300, 120, 320, 140, 340, 160, 360, 180, 380, 200, 400], 
+            y: [10, 40, 80, 120, 160, 200, 240, 280, 320, 360, 400, 440, 480, 520, 560, 600, 640, 680, 720, 760] 
           }}
           transition={{ 
-            duration: 8, 
+            duration: 15, 
             repeat: Infinity, 
             ease: "linear"
           }}
           onUpdate={(latest: any) => {
             const y = latest.y;
-            // Adjust detection range for more lines
-            const lineIndex = Math.floor((y - 15) / 14);
+            // Precise detection for the dense DOM tree
+            const lineIndex = Math.floor((y - 10) / 6.5);
             if (lineIndex >= 0 && lineIndex < domLines.length) {
               setHoveredLine(lineIndex);
             } else {

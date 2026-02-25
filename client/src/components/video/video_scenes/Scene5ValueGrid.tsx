@@ -56,7 +56,7 @@ export function Scene5ValueGrid() {
         initial="hidden"
         animate="show"
       >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-[2vw]">
+        <div className="grid grid-cols-4 gap-[2vw]">
           {features.map((f, i) => (
             <motion.div 
               key={i}

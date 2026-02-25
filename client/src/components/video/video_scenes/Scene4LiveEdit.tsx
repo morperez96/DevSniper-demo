@@ -70,7 +70,7 @@ border-radius: 12px;`;
         {/* Live Preview Side */}
         <div className="flex-1 flex flex-col items-center justify-center min-h-[40vh] relative z-10 px-[2vw]">
            <motion.h1 
-            className="text-heading-xl font-black text-center tracking-tighter leading-tight transition-all duration-300 shadow-sm"
+            className="text-heading-xl font-black text-center tracking-tighter leading-tight transition-all duration-300 shadow-sm max-w-[40vw]"
             animate={{
               color: hasColor ? '#1D8A77' : '#0F172A',
               backgroundColor: hasBg ? '#f0fdfa' : 'transparent',
