@@ -32,7 +32,7 @@ export function Scene1Pain() {
       >
         <h2 className="text-heading-lg font-black text-slate-900 tracking-tight max-w-[80vw] mx-auto leading-tight">
           Tired of digging through code?<br/>
-          Edit your site instantly.
+          <span className="text-[#1D8A77]">Edit your site instantly.</span>
         </h2>
       </motion.div>
 
