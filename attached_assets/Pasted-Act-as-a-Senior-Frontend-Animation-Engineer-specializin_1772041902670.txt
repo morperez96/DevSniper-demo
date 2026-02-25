@@ -1,0 +1,66 @@
+Act as a Senior Frontend Animation Engineer specializing in React, Tailwind CSS, and Framer Motion.
+
+**Objective:** Create a high-fidelity, automated animated product tour (a 30-second "video" built in code) for a WordPress plugin suite called "DevSniper" and "DevSniper PRO".
+
+**Crucial Instruction regarding Visual References:**
+I will provide you with three reference images of the actual product. You must recreate these exact UI elements using Tailwind CSS and React components to ensure maximum authenticity. Do not use generic mockups.
+
+**Reference Image Analysis (What you must recreate in code):**
+
+* **Image_0.png (Branding Banner):** Note the specific "DevSniper" logo (dark text with a teal/dark blue target magnifying glass icon) and the tagline "Bring the Inspector into your website." The background is clean white/light grey.
+* **Image_1.png (The PRO Interface & Inspector):** This is the most important visual. You must replicate:
+    1.  The **teal/green border highlighting** around the target element on the webpage.
+    2.  The **initial Inspector Tooltip**: Dark grey background, small text showing TAG (h2), CLASSES, SIZE, etc.
+    3.  The **full PRO Panel (Floating):** A specific dark mode panel. Note the exact header "DevSniper Inspector", the blue "Open editor" button, the green "Favorite" button, and the data rows below it.
+* **Image_2.png (Admin Search):** Note the styling of the WordPress admin dashboard showing a modal search window (Command Palette style) with a list of results below a search input field.
+
+**Technical Stack:**
+* React (Functional Components with Hooks)
+* Framer Motion (for precise sequencing and smooth transitions)
+* Tailwind CSS (for exact styling replication of the reference images)
+* Lucide React (for necessary icons)
+
+---
+
+**Animation Sequence & Storyboard (30 Seconds Total):**
+
+**Scene 1: The Hook & Branding (0s - 4s)**
+* **Visuals based on Image_0.png.**
+* Start with a clean white background. Animate the "DevSniper" logo and magnifying glass icon floating in smoothly from the center.
+* Text appears below: "Bring the Inspector into your website."
+* Transition: The logo fades out, revealing a blurred WordPress dashboard background.
+
+**Scene 2: Admin Pain vs. Solution (4s - 9s)**
+* **Visuals based on Image_2.png.**
+* Show a frustrated cursor moving around a standard WP admin dashboard.
+* Text overlay: "Lost in the WordPress Admin?"
+* Action: The cursor hits "Ctrl + K".
+* *Reaction:* Instantly pop up the exact search modal seen in **Image_2.png**.
+* Animate the search input typing "Group 42", and the results list (as seen in the image) instantly filtering below it.
+* Text overlay changes to: "Admin Search: Find anything, fast."
+
+**Scene 3: Frontend Inspection (9s - 15s)**
+* **Visuals based on Image_1.png.**
+* Transition to a frontend website view (like the Mickey Mouse site background in the image).
+* Activate the tool: The cursor turns into a target icon.
+* Action: Hover over a headline.
+* *Reaction:* The exact teal highlight border and the small dark **Inspector Tooltip** from **Image_1.png** must pop up instantly next to the cursor. Showing "TAG: h2", "CLASSES: .elementor-heading...", etc.
+
+**Scene 4: PRO Editing & The Magic Sync (15s - 24s)**
+* **Visuals based on Image_1.png structure.**
+* Action: The cursor clicks the tooltip.
+* *Reaction:* The tooltip expands smoothly into the full **dark PRO Panel** exactly as seen in **Image_1.png**. Ensure the blue "Open editor" and green "Favorite" buttons are visible.
+* *New UI State Animation:* Within this panel, animate a switch from the "info view" to an "Edit View" (simulate a tab switch to "CSS"). Show a code textarea appearing within the dark panel.
+* Action (Simulation): Animate CSS being typed slowly: `color: #e100ff; text-decoration: underline;`.
+* *Live Result:* As the CSS is typed, the headline on the website background immediately changes color to purple and gets underlined.
+* *The Sync:* Cursor clicks a "Save" button on the panel. A sleek animation shows a data packet icon flying from the panel into an Elementor logo icon.
+* Text overlay: "Live Edit CSS & Text. Auto-syncs to Elementor settings."
+
+**Scene 5: Summary & Call to Action (24s - 30s)**
+* Transition back to a clean branding screen.
+* Show a 2x2 grid of feature icons fading in: "Frontend Inspector", "Admin Search", "Live CSS Editor", "Elementor Sync".
+* Final CTA Text: "Stop Searching. Start Snipping."
+* Two buttons appear: "Get DevSniper Free" and "Go PRO".
+
+**Deliverables:**
+Provide the complete, single-file React component code that executes this entire 30-second automated sequence precisely as described, using Framer Motion for timeline management. Ensure the styling of the UI components matches the provided reference images precisely.
