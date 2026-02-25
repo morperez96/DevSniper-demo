@@ -109,9 +109,4 @@ export function Scene1Pain() {
       </div>
     </motion.div>
   );
-          <MousePointer2 className="w-6 h-6 text-white fill-[#1D8A77] drop-shadow-[0_0_10px_rgba(29,138,119,0.5)] opacity-90" />
-        </motion.div>
-      </div>
-    </motion.div>
-  );
 }

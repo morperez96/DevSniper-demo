@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle2, Zap, Users, Search, Database, Layout, Clipboard, RefreshCw } from 'lucide-react';
+import { Zap, Users, Search, Database, Layout, Clipboard, RefreshCw } from 'lucide-react';
 
 export function Scene5ValueGrid() {
   const features = [
