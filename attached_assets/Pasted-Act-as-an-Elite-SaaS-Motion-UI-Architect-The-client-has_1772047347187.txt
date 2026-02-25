@@ -1,0 +1,45 @@
+Act as an Elite SaaS Motion UI Architect. The client has provided EXACT visual references for the final animation, and we must pivot our layout approach to match them perfectly.
+
+CRITICAL AESTHETIC PIVOT - "FLOATING MINIMAL UI":
+1. NO BROWSER FRAMES: Drop the "full webpage mockup" idea. Do not wrap the scenes in a full browser window.
+2. BACKGROUND: The entire presentation must happen on a clean, pristine off-white/light-gray background (`bg-[#f8f9fa]` or similar).
+3. CAPTION PLACEMENT: In every scene, the main descriptive text MUST sit at the BOTTOM CENTER of the screen in a massive, bold, dark sans-serif font (Inter/Poppins, Black weight). Highlight specific words in Brand Teal (#1D8A77) as instructed below.
+4. LAYOUT STYLE: The UI elements (Code window, Search modal, PRO panel) must "float" in the center of the canvas with soft, premium drop-shadows.
+
+=== THE EXACT VISUAL STORYBOARD (Match screenshots 1:1) ===
+
+Scene 1: The Code Pain (0s - 7s)
+- Center UI: A dark-mode, rounded macOS window containing stylized, messy DOM/CSS code (use teal and blue syntax highlighting).
+- Animation: Cursor moves erratically over the code.
+- Bottom Caption: "Still wasting hours digging through the DOM?" (Dark slate, centered).
+
+Scene 2: Admin Search (7s - 14s)
+- Center UI: Top - A small, white rounded badge showing "⌘ + K" with a subtle shadow. Immediately below it, the floating Dark Mode DevSniper Command Palette.
+- Modal Content: Search input "hero |". Below it, 3 rows: [Image icon] Hero_Banner.jpg | [Page icon] Home Page | [User icon] Admin.
+- Bottom Caption: "Global Admin Search. " (Dark slate) + "Find anything in milliseconds." (Teal).
+
+Scene 3: Live Edit Split Layout (14s - 26s) [MERGING INSPECT & EDIT]
+- Layout: A clean split-screen floating layout.
+- Left Side: Massive, bold dark text reading "The Ultimate Developer Workflow" (with a green underline/cursor effect).
+- Right Side: The floating DevSniper PRO Dark Panel. Tabs: GENERAL | TEXT | CSS. The "TEXT" tab is active.
+- Animation: 
+  1. Show auto-typing inside the PRO Panel text area.
+  2. The massive text on the Left Side updates IN REAL TIME.
+  3. Cursor switches to CSS tab, types `color: #1D8A77;`. The massive left text turns Teal.
+  4. Cursor clicks the glowing Teal "[Save] Save Changes" button at the bottom of the panel.
+- Bottom Caption: "PRO: Live Edit Text & CSS. " (Dark slate) + "Zero Context Switching." (Teal).
+
+Scene 4: The Ultimate Value Grid (26s - 34s)
+- Center UI: The floating elements fade out. A clean 2x4 grid of 8 large, elegant feature cards fades in.
+- Card Style: White cards, subtle shadows, Lucide icon centered on top, bold text below.
+- Bottom Caption: "Everything you need to speed up development."
+
+Scene 5: The Closing CTA (34s - 40s)
+- Center UI: Grid fades out. The DevSniper Logo (Target Magnifying Glass) scales up cleanly.
+- Bottom Caption: "Stop Searching. Start Snipping."
+- Action: Two premium buttons fade up below the caption: [ Get DevSniper Free ] (Outline) and [ Upgrade to PRO ] (Solid Teal).
+
+=== TECHNICAL REQUIREMENTS ===
+1. Tech: React, Tailwind CSS, Framer Motion, Lucide React.
+2. Typography is crucial. Use extreme font weights (e.g., `font-black`, `tracking-tight`) for the bottom captions to match the reference images.
+3. DO NOT TRUNCATE. Write the complete component. Wait for me to say "continue" if you hit the output limit.
