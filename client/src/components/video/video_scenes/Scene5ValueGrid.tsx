@@ -36,11 +36,18 @@ export function Scene5ValueGrid() {
 
   return (
     <motion.div
-      className="absolute inset-0 bg-white flex flex-col items-center justify-center overflow-hidden p-[3vw]"
+      className="absolute inset-0 bg-[#F8FAFC] flex flex-col items-center justify-center overflow-hidden p-[3vw]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, y: -20 }}
     >
+      {/* Enhanced Background Decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] right-[-10%] w-[45%] h-[45%] bg-[#1D8A77]/5 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[45%] h-[45%] bg-blue-500/5 blur-[120px] rounded-full" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]" />
+      </div>
+
       <div className="absolute inset-0 bg-[radial-gradient(#1D8A77_1px,transparent_1px)] [background-size:2vw:2vw] opacity-[0.03]" />
       
       <motion.div 
