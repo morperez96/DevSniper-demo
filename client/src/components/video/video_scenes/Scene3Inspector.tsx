@@ -7,8 +7,8 @@ export function Scene3Inspector() {
 
   useEffect(() => {
     const timers = [
-      setTimeout(() => setStep(1), 2000), // Move to button
-      setTimeout(() => setStep(2), 5000), // Move to title
+      setTimeout(() => setStep(1), 800), // Move to button quickly
+      setTimeout(() => setStep(2), 2000), // Move to headline (Stay much longer here)
     ];
     return () => timers.forEach(clearTimeout);
   }, []);
