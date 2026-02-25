@@ -97,11 +97,11 @@ border-radius: 12px;`;
                <div className="text-slate-500 mt-2">{'}'}</div>
             </div>
 
-            <div className="flex justify-end items-center gap-4">
+            <div className="flex justify-end items-center gap-4 pointer-events-none">
                <AnimatePresence>
                  {showSuccess && (
                    <motion.div 
-                    className="flex items-center gap-2 text-emerald-400 font-bold"
+                    className="flex items-center gap-2 text-emerald-400 font-bold pointer-events-none"
                     initial={{ scale: 0.5, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                    >
@@ -111,7 +111,7 @@ border-radius: 12px;`;
                  )}
                </AnimatePresence>
                <motion.div 
-                className={`px-8 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg transition-colors ${showSuccess ? 'bg-emerald-500' : 'bg-[#1D8A77]'}`}
+                className={`px-8 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg transition-colors pointer-events-none ${showSuccess ? 'bg-emerald-500' : 'bg-[#1D8A77]'}`}
                >
                  <Save className="w-5 h-5" />
                  Save Changes

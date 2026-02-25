@@ -54,7 +54,7 @@ export function Scene4Sync() {
           <h3 className="text-white font-bold text-xl mb-8">DevSniper</h3>
           
           <motion.div
-            className={`px-8 py-3 rounded-lg font-bold transition-all shadow-lg text-white ${showSave ? 'bg-[#1D8A77] shadow-[0_0_20px_rgba(29,138,119,0.6)]' : 'bg-slate-700'}`}
+            className={`px-8 py-3 rounded-lg font-bold transition-all shadow-lg text-white pointer-events-none ${showSave ? 'bg-[#1D8A77] shadow-[0_0_20px_rgba(29,138,119,0.6)]' : 'bg-slate-700'}`}
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.8 }}

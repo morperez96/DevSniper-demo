@@ -120,7 +120,7 @@ export function Scene5CTA() {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 w-full justify-center z-20"
+            className="flex flex-col sm:flex-row gap-4 w-full justify-center z-20 pointer-events-none"
             initial={{ y: 20, opacity: 0 }}
             animate={{ 
               y: showButtons ? 0 : 20, 

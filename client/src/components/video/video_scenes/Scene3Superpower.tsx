@@ -143,7 +143,7 @@ background: #fee2e2;`;
                   </div>
                 ))}
                 <motion.span 
-                  className="inline-block w-2 h-4 bg-[#1D8A77] ml-1 align-middle"
+                  className="inline-block w-2 h-4 bg-[#1D8A77] ml-1 align-middle pointer-events-none"
                   animate={{ opacity: [1, 0, 1] }}
                   transition={{ duration: 0.8, repeat: Infinity }}
                 />

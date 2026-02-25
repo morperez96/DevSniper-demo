@@ -102,7 +102,7 @@ export function Scene3LiveText() {
                   </motion.div>
                 </div>
                 <div className="flex justify-end pt-4">
-                  <div className="px-8 py-3 bg-[#1D8A77] text-white rounded-xl font-bold shadow-lg shadow-[#1D8A77]/20">
+                  <div className="px-8 py-3 bg-[#1D8A77] text-white rounded-xl font-bold shadow-lg shadow-[#1D8A77]/20 pointer-events-none">
                     Save Changes
                   </div>
                 </div>

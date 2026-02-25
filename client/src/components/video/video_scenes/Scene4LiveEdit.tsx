@@ -147,7 +147,7 @@ border-radius: 12px;`;
                <AnimatePresence>
                  {showSuccess && (
                    <motion.div 
-                    className="flex items-center gap-[0.5vw] text-emerald-400 font-black text-[clamp(8px,0.9vw,12px)] px-[0.8vw] py-[0.4vh] bg-emerald-500/10 rounded-full border border-emerald-500/20"
+                    className="flex items-center gap-[0.5vw] text-emerald-400 font-black text-[clamp(8px,0.9vw,12px)] px-[0.8vw] py-[0.4vh] bg-emerald-500/10 rounded-full border border-emerald-500/20 pointer-events-none"
                     initial={{ scale: 0.8, opacity: 0, x: 10 }}
                     animate={{ scale: 1, opacity: 1, x: 0 }}
                    >
@@ -157,7 +157,7 @@ border-radius: 12px;`;
                  )}
                </AnimatePresence>
                <motion.div 
-                className={`px-[1.2vw] py-[0.6vh] rounded-xl font-black text-[clamp(10px,1vw,14px)] flex items-center gap-[0.5vw] shadow-lg transition-all ${showSuccess ? 'bg-emerald-500' : 'bg-[#1D8A77]'}`}
+                className={`px-[1.2vw] py-[0.6vh] rounded-xl font-black text-[clamp(10px,1vw,14px)] flex items-center gap-[0.5vw] shadow-lg transition-all pointer-events-none ${showSuccess ? 'bg-emerald-500' : 'bg-[#1D8A77]'}`}
                >
                  <Save className="w-[clamp(14px,1.2vw,20px)] h-[clamp(14px,1.2vw,20px)]" />
                  Save Changes

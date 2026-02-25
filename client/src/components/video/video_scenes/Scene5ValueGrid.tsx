@@ -3,14 +3,14 @@ import { CheckCircle2, Zap, Users, Search, Database, Layout, Clipboard, RefreshC
 
 export function Scene5ValueGrid() {
   const features = [
-    { title: "Live Edit", icon: RefreshCw },
-    { title: "Zero Bloat", icon: Zap },
-    { title: "Team Favs", icon: Users },
-    { title: "Admin Search", icon: Search },
-    { title: "Data Sync", icon: Database },
-    { title: "Native UI", icon: Layout },
-    { title: "Copy Paths", icon: Clipboard },
-    { title: "Cache Clear", icon: RefreshCw },
+    { title: "Live Edit", desc: "Real-time CSS & Text", icon: RefreshCw },
+    { title: "Zero Bloat", desc: "Fast & Lightweight", icon: Zap },
+    { title: "Team Favs", desc: "Built for Agencies", icon: Users },
+    { title: "Admin Search", desc: "Find anything fast", icon: Search },
+    { title: "Data Sync", desc: "Cloud connectivity", icon: Database },
+    { title: "Native UI", desc: "Seamless integration", icon: Layout },
+    { title: "Copy Paths", desc: "One-click copy", icon: Clipboard },
+    { title: "Cache Clear", desc: "Instant refresh", icon: RefreshCw },
   ];
 
   const container = {
@@ -61,12 +61,15 @@ export function Scene5ValueGrid() {
             <motion.div 
               key={i}
               variants={item}
-              className="flex flex-col items-center justify-center gap-[1.2vh] bg-white p-[1.2vw] rounded-xl border border-slate-100 shadow-md hover:shadow-lg transition-all text-center group aspect-square w-full max-w-[15vw] mx-auto"
+              className="flex flex-col items-center justify-center gap-[1vh] bg-white p-[1vw] rounded-xl border border-slate-100 shadow-md hover:shadow-lg transition-all text-center group aspect-square w-full max-w-[15vw] mx-auto"
             >
-              <div className="w-[clamp(32px,3vw,48px)] h-[clamp(32px,3vw,48px)] rounded-lg bg-[#1D8A77]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-[clamp(32px,3vw,48px)] h-[clamp(32px,3vw,48px)] flex items-center justify-center group-hover:scale-110 transition-transform pointer-events-none">
                 <f.icon className="w-[clamp(16px,1.5vw,24px)] h-[clamp(16px,1.5vw,24px)] text-[#1D8A77]" strokeWidth={2.5} />
               </div>
-              <span className="text-[clamp(0.7rem,1.2vw,0.9rem)] font-black text-slate-900 tracking-tight leading-tight px-1">{f.title}</span>
+              <div className="space-y-[0.3vh]">
+                <div className="text-[clamp(0.7rem,1.1vw,0.9rem)] font-black text-slate-900 tracking-tight leading-tight px-1">{f.title}</div>
+                <div className="text-[clamp(0.5rem,0.8vw,0.7rem)] text-slate-500 font-medium leading-tight">{f.desc}</div>
+              </div>
             </motion.div>
           ))}
         </div>

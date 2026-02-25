@@ -41,7 +41,7 @@ export function Scene4Drop() {
           </span>
         </h1>
 
-        <div className="flex gap-6 justify-center">
+        <div className="flex gap-6 justify-center pointer-events-none">
           <div className="px-12 py-5 rounded-2xl font-black text-2xl border-4 border-slate-200 text-slate-300">
             Get Free
           </div>

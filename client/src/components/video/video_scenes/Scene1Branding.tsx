@@ -49,7 +49,7 @@ export function Scene1Branding() {
             <p className="text-2xl text-slate-500 font-medium">
               Bring the Inspector into your website.
             </p>
-            <div className="flex items-center gap-1 bg-slate-100 px-2 py-1 rounded border border-slate-200 text-xs font-mono text-slate-400">
+            <div className="flex items-center gap-1 bg-slate-100 px-2 py-1 rounded border border-slate-200 text-xs font-mono text-slate-400 pointer-events-none">
               <Command className="w-3 h-3" />
               <span>Ctrl + K</span>
             </div>

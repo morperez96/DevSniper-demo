@@ -43,13 +43,13 @@ export function Scene3Inspector() {
             </p>
           </div>
 
-          <div className="flex gap-[1.5vw] pointer-events-none">
+          <div className="flex gap-[1.5vw]">
             <motion.div 
-              className={`px-[2.5vw] py-[1vh] bg-[#1D8A77] text-white rounded-xl font-black text-[1.2vw] shadow-xl transition-all duration-500 ${step === 1 ? 'ring-2 ring-[#1D8A77] ring-offset-2' : ''}`}
+              className={`px-[2.5vw] py-[1vh] bg-[#1D8A77] text-white rounded-xl font-black text-[1.2vw] shadow-xl transition-all duration-500 pointer-events-none ${step === 1 ? 'ring-2 ring-[#1D8A77] ring-offset-2' : ''}`}
             >
               Get Started
             </motion.div>
-            <div className="px-[2.5vw] py-[1vh] bg-slate-50 text-slate-900 rounded-xl font-black text-[1.2vw] border border-slate-200">
+            <div className="px-[2.5vw] py-[1vh] bg-slate-50 text-slate-900 rounded-xl font-black text-[1.2vw] border border-slate-200 pointer-events-none">
               Live Demo
             </div>
           </div>

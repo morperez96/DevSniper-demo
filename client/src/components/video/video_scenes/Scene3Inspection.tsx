@@ -93,7 +93,7 @@ text-decoration: underline;`;
               <div className="w-2 h-2 rounded-full bg-red-500" />
             </div>
             <div className="p-4 space-y-3">
-              <div className="flex gap-2">
+              <div className="flex gap-2 pointer-events-none">
                 <div className="flex-1 bg-[#38bdf8] text-[#0F172A] py-2 rounded font-bold text-center text-xs">Open editor</div>
                 <div className="flex-1 bg-[#1D8A77] text-white py-2 rounded font-bold text-center text-xs">Favorite</div>
               </div>
@@ -130,7 +130,7 @@ text-decoration: underline;`;
                <div className="w-4 h-4 text-slate-500">✕</div>
              </div>
 
-             <div className="flex gap-2 p-4">
+             <div className="flex gap-2 p-4 pointer-events-none">
                 <div className="flex-1 bg-[#38bdf8] text-[#0F172A] py-2.5 rounded-lg font-bold text-center text-sm shadow-lg">Open editor</div>
                 <div className="flex-1 bg-[#1D8A77] text-white py-2.5 rounded-lg font-bold text-center text-sm shadow-lg">Favorite</div>
              </div>

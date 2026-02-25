@@ -45,7 +45,7 @@ export function Scene4Summary() {
           Stop Searching. <span className="text-[#1D8A77]">Start Snipping.</span>
         </h2>
         
-        <div className="flex gap-6 justify-center">
+        <div className="flex gap-6 justify-center pointer-events-none">
           <div className="px-10 py-5 bg-white text-slate-900 rounded-2xl font-bold text-xl shadow-2xl">
             Get DevSniper Free
           </div>

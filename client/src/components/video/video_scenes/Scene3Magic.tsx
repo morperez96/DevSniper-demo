@@ -142,13 +142,13 @@ border-radius: 8px;`;
                     <div className="text-blue-400 whitespace-pre-wrap">{cssCode}</div>
                   )}
                 </div>
-                <div className="p-4 bg-[#1E293B] flex justify-between items-center">
+                <div className="p-4 bg-[#1E293B] flex justify-between items-center pointer-events-none">
                    {showSuccess && (
-                     <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="flex items-center gap-2 text-emerald-400 font-bold text-xs">
+                     <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="flex items-center gap-2 text-emerald-400 font-bold text-xs pointer-events-none">
                        <CheckCircle2 className="w-4 h-4" /> Saved!
                      </motion.div>
                    )}
-                   <div className="ml-auto bg-[#1D8A77] px-6 py-2 rounded-xl font-bold flex items-center gap-2 text-sm shadow-lg">
+                   <div className="ml-auto bg-[#1D8A77] px-6 py-2 rounded-xl font-bold flex items-center gap-2 text-sm shadow-lg pointer-events-none">
                      <Save className="w-4 h-4" /> Save
                    </div>
                 </div>
