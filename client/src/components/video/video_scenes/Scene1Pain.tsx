@@ -72,13 +72,18 @@ export function Scene1Pain() {
         <motion.div
           className="absolute z-50 pointer-events-none"
           animate={{ 
-            x: [50, 350, 150, 450, 100, 250], 
-            y: [40, 120, 80, 160, 60, 100] 
+            x: [20, 60, 30, 80, 40, 100, 50, 120], 
+            y: [25, 45, 65, 85, 105, 125, 145, 165] 
           }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ 
+            duration: 6, 
+            repeat: Infinity, 
+            ease: "linear"
+          }}
           onUpdate={(latest: any) => {
             const y = latest.y;
-            const lineIndex = Math.floor((y - 20) / 16);
+            // Adjust detection range to match visual lines better
+            const lineIndex = Math.floor((y - 20) / 20);
             if (lineIndex >= 0 && lineIndex < domLines.length) {
               setHoveredLine(lineIndex);
             } else {
@@ -86,7 +91,7 @@ export function Scene1Pain() {
             }
           }}
         >
-          <MousePointer2 className="w-7 h-7 text-white fill-white drop-shadow-lg opacity-90" />
+          <MousePointer2 className="w-6 h-6 text-white fill-[#1D8A77] drop-shadow-[0_0_10px_rgba(29,138,119,0.5)] opacity-90" />
         </motion.div>
       </div>
     </motion.div>
