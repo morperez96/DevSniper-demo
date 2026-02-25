@@ -83,7 +83,7 @@ export function Scene5ValueGrid() {
       >
         <motion.div variants={item} className="text-center space-y-4 relative">
           <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-black text-slate-900 tracking-tighter uppercase italic leading-none relative">
-            Next-Gen <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1D8A77] to-emerald-600 not-italic">Performance</span>
+            Next-Gen <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1D8A77] to-emerald-600 not-italic">Features</span>
           </h2>
           <div className="h-[3px] w-32 bg-gradient-to-r from-transparent via-[#1D8A77] to-transparent mx-auto rounded-full opacity-50" />
         </motion.div>
