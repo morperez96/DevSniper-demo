@@ -7,13 +7,19 @@ export function Scene1Pain() {
 
   const domLines = [
     { indent: 0, tag: 'div', class: 'elementor-section-wrap' },
-    { indent: 2, tag: 'section', class: 'element-top-section' },
-    { indent: 4, tag: 'div', class: 'elementor-container elementor-column-gap-default' },
-    { indent: 6, tag: 'div', class: 'elementor-column elementor-col-100' },
-    { indent: 8, tag: 'div', class: 'elementor-widget-wrap elementor-element-populated' },
-    { indent: 10, tag: 'div', class: 'elementor-widget elementor-widget-heading' },
-    { indent: 12, tag: 'div', class: 'elementor-widget-container' },
-    { indent: 14, tag: 'h2', class: 'elementor-heading-title' },
+    { indent: 1, tag: 'section', class: 'element-top-section' },
+    { indent: 2, tag: 'div', class: 'elementor-container' },
+    { indent: 3, tag: 'div', class: 'elementor-row' },
+    { indent: 4, tag: 'div', class: 'elementor-column' },
+    { indent: 5, tag: 'div', class: 'elementor-widget-wrap' },
+    { indent: 6, tag: 'div', class: 'elementor-element' },
+    { indent: 7, tag: 'div', class: 'elementor-widget-container' },
+    { indent: 8, tag: 'div', class: 'elementor-main-content' },
+    { indent: 9, tag: 'div', class: 'elementor-inner-section' },
+    { indent: 10, tag: 'div', class: 'elementor-column-wrap' },
+    { indent: 11, tag: 'h2', class: 'elementor-heading-title' },
+    { indent: 12, tag: 'div', class: 'elementor-text-editor' },
+    { indent: 13, tag: 'p', class: 'description' },
   ];
 
   return (
@@ -72,18 +78,18 @@ export function Scene1Pain() {
         <motion.div
           className="absolute z-50 pointer-events-none"
           animate={{ 
-            x: [20, 60, 30, 80, 40, 100, 50, 120], 
-            y: [25, 45, 65, 85, 105, 125, 145, 165] 
+            x: [20, 100, 40, 140, 60, 160, 80, 180, 100, 200], 
+            y: [20, 40, 60, 80, 100, 120, 140, 160, 180, 200] 
           }}
           transition={{ 
-            duration: 6, 
+            duration: 8, 
             repeat: Infinity, 
             ease: "linear"
           }}
           onUpdate={(latest: any) => {
             const y = latest.y;
-            // Adjust detection range to match visual lines better
-            const lineIndex = Math.floor((y - 20) / 20);
+            // Adjust detection range for more lines
+            const lineIndex = Math.floor((y - 15) / 14);
             if (lineIndex >= 0 && lineIndex < domLines.length) {
               setHoveredLine(lineIndex);
             } else {
