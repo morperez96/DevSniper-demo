@@ -31,7 +31,7 @@ export function Scene1Pain() {
         transition={{ delay: 0.4, duration: 0.8 }}
       >
         <h2 className="text-heading-lg font-black text-slate-900 tracking-tight max-w-[80vw] mx-auto leading-tight">
-          Tired of digging through code?<br/>
+          Still hunting for selectors in the DOM?<br/>
           <span className="text-[#1D8A77]">Edit your site instantly.</span>
         </h2>
       </motion.div>
