@@ -1,0 +1,45 @@
+Act as an Elite SaaS Motion UI Architect. Your task is to apply final layout constraints and specific interaction animations to our React + Framer Motion DevSniper promo video.
+
+CRITICAL NEW FIXES:
+1. CENTERED, FIXED-SIZE CONTAINER (NOT FULLSCREEN): The entire video sequence MUST NOT stretch across the entire browser window. You must wrap the entire presentation in a centered, fixed-aspect-ratio container to make it look like an embedded video player. 
+   - Use a wrapper like: `<div className="max-w-4xl w-full aspect-video mx-auto relative overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-white">`
+   - All scenes and elements must be constrained absolutely within this specific box.
+2. SCENE 1 - EXPLICIT CURSOR HOVER EFFECT: In the first scene, the frantic cursor MUST physically move *over* the lines of the messy DOM/CSS code. You must animate a visual highlight (e.g., background color changing to a soft gray/teal) on the specific lines of code exactly as the cursor passes over them to simulate a real-world `:hover` inspection, emphasizing the struggle.
+
+=== THE LOCKED-IN STORYBOARD ===
+
+Scene 1: The Developer's Pain (0s - 7s)
+- UI: Inside the main centered container, place the Title ("Still wasting hours digging through the DOM?") neatly at the top. Below it, a compact macOS window with messy DOM tree code.
+- *ACTION FIX:* The cursor moves erratically over the code. As it touches different lines, those lines actively highlight to show the user is struggling to find the right element.
+
+Scene 2: The Command Palette Search (7s - 14s)
+- Transition: Crossfade to blurred WordPress wp-admin.
+- UI Reveal: DevSniper Command Palette snaps open in the center of the container.
+- Simulation: Auto-type "hero". Shows 3 compact rows: [Image] Hero_Banner.jpg | [FileText] Home Page | [User] Admin.
+
+Scene 3: The Target Inspector (14s - 22s)
+- Transition: Zoom into a properly scaled macOS browser frame (fits inside the main 4xl container).
+- Action: Cursor morphs into the Teal Target Crosshair (`<Target />`).
+- Animation: Crosshair hovers over a button, then glides to the Hero Title. Tooltips appear cleanly.
+
+Scene 4: The Core Magic - Live Edit & Sync (22s - 34s)
+- Action: Crosshair clicks the Hero Title. Tooltip morphs into the DevSniper PRO Panel.
+- *PREVIOUS FIX RETAINED:* Ensure the PRO Panel fits entirely inside the view without cutting off the bottom "Save" button.
+- Live Text Edit: Auto-type: "The Ultimate Developer Workflow". Background Title updates IN REAL TIME.
+- Live CSS Edit: Auto-type: `color: #1D8A77; background: #f0fdfa; border-radius: 12px;`. Visuals transform.
+- Action: Cursor clicks glowing Teal "Save". Checkmark appears.
+
+Scene 5: The Ultimate Value Grid (34s - 40s)
+- Transition: Sweep to pristine white/teal background.
+- UI: A 2x4 grid of 8 feature cards. These must be normal, elegant sizes (not oversized), complete with Lucide icons.
+
+Scene 6: The Closing CTA (40s - 45s)
+- Transition: Features fade out.
+- UI Reveal: DevSniper Logo scales up cleanly in the center of the container.
+- Final Text: "Stop Searching. Start Snipping."
+- Action: Two standard-sized premium buttons fade up.
+
+=== TECHNICAL REQUIREMENTS ===
+1. Tech: React, Tailwind CSS, Framer Motion, Lucide React.
+2. EVERYTHING must happen inside the `max-w-4xl aspect-video` parent container. Zero overflow outside of it.
+3. DO NOT TRUNCATE. If you hit the length limit, stop and wait for "continue".

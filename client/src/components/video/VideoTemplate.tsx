@@ -23,15 +23,27 @@ export default function VideoTemplate() {
   });
 
   return (
-    <div className="w-screen h-screen overflow-hidden relative bg-white">
-      <AnimatePresence mode="wait">
-        {currentScene === 0 && <Scene1Pain key="pain" />}
-        {currentScene === 1 && <Scene2Search key="search" />}
-        {currentScene === 2 && <Scene3Inspector key="inspector" />}
-        {currentScene === 3 && <Scene4LiveEdit key="liveEdit" />}
-        {currentScene === 4 && <Scene5ValueGrid key="valueGrid" />}
-        {currentScene === 5 && <Scene6ClosingCTA key="closingCTA" />}
-      </AnimatePresence>
+    <div className="w-screen h-screen bg-slate-100 flex items-center justify-center p-8">
+      <div className="max-w-4xl w-full aspect-video relative overflow-hidden rounded-xl shadow-2xl border border-slate-200 bg-white group">
+        <AnimatePresence mode="wait">
+          {currentScene === 0 && <Scene1Pain key="pain" />}
+          {currentScene === 1 && <Scene2Search key="search" />}
+          {currentScene === 2 && <Scene3Inspector key="inspector" />}
+          {currentScene === 3 && <Scene4LiveEdit key="liveEdit" />}
+          {currentScene === 4 && <Scene5ValueGrid key="valueGrid" />}
+          {currentScene === 5 && <Scene6ClosingCTA key="closingCTA" />}
+        </AnimatePresence>
+        
+        {/* Subtle decorative elements for the "player" look */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-slate-100 z-[100]">
+          <div 
+            className="h-full bg-[#1D8A77] transition-all duration-300 ease-linear"
+            style={{ 
+              width: `${((currentScene + 1) / Object.keys(SCENE_DURATIONS).length) * 100}%` 
+            }}
+          />
+        </div>
+      </div>
     </div>
   );
 }
