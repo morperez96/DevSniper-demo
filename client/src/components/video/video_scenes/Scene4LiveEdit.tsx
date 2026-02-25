@@ -54,21 +54,30 @@ border-radius: 12px;`;
 
   return (
     <motion.div
-      className="absolute inset-0 bg-white flex items-center justify-center overflow-hidden p-[2vw]"
+      className="absolute inset-0 bg-[#F8FAFC] flex items-center justify-center overflow-hidden p-[2vw]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
+      {/* Enhanced Background Decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#1D8A77]/5 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/5 blur-[120px] rounded-full" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]" />
+      </div>
+
       <div className="w-full max-w-[90vw] flex gap-[3vw] items-center h-full relative">
         {/* Live Preview Side */}
         <div className="flex-1 flex flex-col items-center justify-center min-h-[40vh] relative z-10 px-[2vw]">
            <motion.h1 
-            className="text-heading-xl font-black text-center tracking-tighter leading-tight transition-all duration-300"
+            className="text-heading-xl font-black text-center tracking-tighter leading-tight transition-all duration-300 shadow-sm"
             animate={{
               color: hasColor ? '#1D8A77' : '#0F172A',
               backgroundColor: hasBg ? '#f0fdfa' : 'transparent',
-              padding: hasRadius ? 'clamp(8px, 1vw, 24px) clamp(16px, 2vw, 48px)' : '0px',
-              borderRadius: hasRadius ? 'clamp(8px, 1vw, 16px)' : '0px',
+              padding: hasRadius ? 'clamp(12px, 1.5vw, 32px) clamp(24px, 3vw, 64px)' : '0px',
+              borderRadius: hasRadius ? 'clamp(12px, 1.5vw, 24px)' : '0px',
+              boxShadow: hasBg ? '0 20px 50px -12px rgba(29, 138, 119, 0.15)' : 'none',
+              border: hasBg ? '1px solid rgba(29, 138, 119, 0.1)' : '1px solid transparent'
             }}
           >
             {headline}
