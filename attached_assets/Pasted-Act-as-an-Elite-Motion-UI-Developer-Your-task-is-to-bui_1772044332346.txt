@@ -1,0 +1,46 @@
+Act as an Elite Motion UI Developer. Your task is to build a fast-paced, high-energy, 20-second React + Framer Motion promotional animation for the "DevSniper" WordPress plugin. 
+
+CRITICAL DIRECTIVES:
+- Pacing: Fast, punchy, and dynamic. Do not let the screen sit still.
+- Aesthetics: Light, modern theme with a realistic macOS browser frame wrapping the mock website. The DevSniper UI itself must be Dark Mode (#1E293B) for contrast.
+- Elements to Include: A Target/Crosshair cursor (`<Target />` from Lucide), messy Chrome DevTools DOM code, global Admin Search, and real-time PRO editing.
+
+=== THE 20-SECOND FAST-PITCH STORYBOARD ===
+
+0s - 3s: The Nightmare (Fast Cut)
+- UI: Screen is filled with a chaotic, dark Chrome DevTools DOM tree. Endless `<div>`, nested classes, confusing CSS.
+- Animation: Cursor moves frantically.
+- Big Bold Text over it: "Still wasting hours hunting for elements?"
+- Sound/Vibe: Glitchy, frustrating.
+
+3s - 7s: The Shortcut (Admin Search)
+- Transition: Whip-pan to a clean, blurred WordPress Admin.
+- Action: "Ctrl/Cmd + K" flashes on screen.
+- UI: The dark DevSniper Command Palette instantly snaps open.
+- Animation: Fast typing "hero" -> Instantly shows [Media], [Page], [User] results.
+- Text: "Find anything. Instantly."
+
+7s - 15s: The Magic (Inspector & Live PRO Edit)
+- Transition: Smooth zoom into a sleek macOS browser frame showing a modern webpage with an English Hero Headline and buttons.
+- Action: Cursor becomes the DevSniper Teal TARGET CROSSHAIR. 
+- Animation (Fast paced): 
+  1. Crosshair hovers over a button -> Teal highlight box + Tooltip appears.
+  2. Crosshair immediately moves to the Hero Headline -> Teal highlight -> Clicks it.
+- UI Reveal: The tooltip instantly expands into the DevSniper PRO Panel.
+- Live Action:
+  - Text Tab: Rapidly auto-types "Ultimate Dev Workflow". The headline on the macOS browser changes INSTANTLY.
+  - CSS Tab: Rapidly auto-types `color: #1D8A77; border-radius: 8px;`. The headline turns teal and gets rounded instantly.
+- Action: Clicks glowing Save button. Checkmark pops.
+- Text: "Hover. Target. Live Edit. Save."
+
+15s - 20s: The Drop (CTA)
+- Transition: UI elements fly out, leaving a clean white/teal background.
+- Rapid Bullet Points cascading in: "✓ Zero Bloat" | "✓ Team Favorites" | "✓ Unmatched Speed"
+- Final Text (Huge): "Stop Searching. Start Snipping."
+- Buttons Pop: [ Get Free ] and [ Go PRO ].
+
+=== TECHNICAL REQUIREMENTS ===
+1. Use React, Tailwind CSS, Framer Motion, and Lucide React.
+2. Build the exact UI components: The macOS window frame, the messy DOM code block, the Command Palette, and the PRO Panel.
+3. Master the `framer-motion` timeline to ensure this entire sequence runs flawlessly and automatically in exactly 20 seconds. 
+4. Output the full, self-contained functional code.
