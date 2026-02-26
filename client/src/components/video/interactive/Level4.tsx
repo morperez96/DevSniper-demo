@@ -22,7 +22,6 @@ export function Level4({ onNext }: { onNext: () => void }) {
 
   const hasTextChanged = headline !== initialHeadline && headline.trim().length > 0;
   const hasCssChanged = cssCode.trim().length > 0;
-  const canSave = hasTextChanged && hasCssChanged;
 
   // Calculate overall progress
   useEffect(() => {
