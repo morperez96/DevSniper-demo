@@ -130,7 +130,7 @@ export function Level4({ onNext }: { onNext: () => void }) {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h2 className="text-heading-lg font-black text-slate-900 tracking-tight">
+        <h2 className="text-[clamp(1.2rem,2.2vw,3rem)] font-black text-slate-900 tracking-tight leading-[1.2]">
           {activeTab === 'Text' && !hasTextChanged && (
             <>1. <span className="text-[#1D8A77]">Edit the text</span> in the panel below.</>
           )}

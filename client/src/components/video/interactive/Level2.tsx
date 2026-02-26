@@ -24,11 +24,11 @@ export function Level2({ onNext }: { onNext: () => void }) {
       <div className="absolute inset-0 bg-[url('https://s.w.org/style/images/about/WordPress-logotype-wmark.png')] bg-no-repeat bg-center bg-[length:800px] opacity-10 mix-blend-multiply" />
       
       <motion.div 
-        className="z-50 mb-[3vh] flex flex-col items-center text-center gap-[1vh]"
+        className="z-50 mb-[4vh] flex flex-col items-center text-center gap-[1vh]"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        <h2 className="text-heading-lg font-black text-slate-900 tracking-tight">
+        <h2 className="text-[clamp(1.5rem,2.8vw,3.5rem)] font-black text-slate-900 tracking-tight leading-[1.2]">
           <motion.span 
             animate={{ opacity: [0.5, 1, 0.5] }} 
             transition={{ repeat: Infinity, duration: 2 }}

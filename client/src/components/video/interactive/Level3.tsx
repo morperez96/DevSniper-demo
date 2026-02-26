@@ -26,11 +26,11 @@ export function Level3({ onNext }: { onNext: () => void }) {
       transition={{ duration: 0.5 }}
     >
       <motion.div 
-        className="absolute top-[6vh] text-center px-[2vw] z-50 pointer-events-none"
+        className="absolute top-[5vh] text-center px-[2vw] z-50 pointer-events-none"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h2 className="text-heading-md font-black text-slate-900 tracking-tight">
+        <h2 className="text-[clamp(1.2rem,2.2vw,3rem)] font-black text-slate-900 tracking-tight leading-[1.2]">
           {!targetAttached ? (
             <>
               Click the <span className="text-[#1D8A77]">Target icon</span> to activate the Inspector.

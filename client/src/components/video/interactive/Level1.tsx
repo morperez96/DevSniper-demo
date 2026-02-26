@@ -53,7 +53,7 @@ export function Level1({ onNext }: { onNext: () => void }) {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        <h2 className="text-heading-lg font-black text-slate-900 tracking-tight max-w-[80vw] mx-auto leading-tight">
+        <h2 className="text-[clamp(1.5rem,2.8vw,3.5rem)] font-black text-slate-900 tracking-tight max-w-[90vw] mx-auto leading-[1.2]">
           Still hunting for selectors in the DOM?<br/>
           <motion.span 
             animate={{ opacity: [0.5, 1, 0.5] }} 
@@ -65,7 +65,7 @@ export function Level1({ onNext }: { onNext: () => void }) {
         </h2>
       </motion.div>
 
-      <div className="w-[55%] max-w-[45vw] bg-[#1E293B] rounded-2xl shadow-2xl overflow-hidden border border-slate-700 aspect-video relative">
+      <div className="w-[60%] max-w-[50vw] bg-[#1E293B] rounded-2xl shadow-2xl overflow-hidden border border-slate-700 aspect-video relative">
         <div className="h-[2.5vh] bg-[#0F172A] flex items-center px-[1vw] gap-[0.4vw] border-b border-slate-800">
           <div className="w-[0.5vw] h-[0.5vw] rounded-full bg-red-500/40" />
           <div className="w-[0.5vw] h-[0.5vw] rounded-full bg-amber-500/40" />
