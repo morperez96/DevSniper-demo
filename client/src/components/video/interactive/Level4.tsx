@@ -44,7 +44,7 @@ export function Level4({ onNext }: { onNext: () => void }) {
     if (value.toLowerCase().trim() === 'c' && cssCode === '') {
       value = 'color: #1D8A77;';
     } else if (value.includes('\n') && cssCode === 'color: #1D8A77;') {
-      value = 'color: #1D8A77;\nbackground: #f0fdfa;\nborder-radius: 12px;';
+      value = 'color: #1D8A77;\nbackground: #0F172A;\nborder-radius: 16px;\npadding: 20px 40px;';
     }
 
     setCssCode(value);
@@ -200,7 +200,6 @@ export function Level4({ onNext }: { onNext: () => void }) {
                         value={cssCode}
                         onChange={handleCssChange}
                         className="flex-1 w-full bg-transparent border-none outline-none text-emerald-400 resize-none leading-relaxed pl-4"
-                        placeholder="color: #1D8A77;"
                      />
                      <div className="text-slate-500 mt-1">{'}'}</div>
                    </motion.div>
