@@ -48,7 +48,7 @@ export function Level1({ onNext }: { onNext: () => void }) {
       transition={{ duration: 0.4 }}
     >
       <motion.div 
-        className="mb-[4vh] text-center z-50 px-[2vw]"
+        className="mb-[2vh] text-center z-50 px-[2vw] -mt-[10vh]"
         initial={{ y: -15, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
