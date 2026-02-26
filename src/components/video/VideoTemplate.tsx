@@ -14,7 +14,7 @@ export default function VideoTemplate() {
   };
 
   return (
-    <div className="w-screen h-screen overflow-hidden relative bg-[#F8FAFC] flex items-center justify-center">
+    <div className="fixed inset-0 w-full h-full overflow-hidden bg-[#F8FAFC] flex items-center justify-center m-0 p-0">
       <div className="w-full h-full max-w-[1920px] max-h-[1080px] aspect-video relative">
         <AnimatePresence mode="wait">
           {currentLevel === 1 && <Level1 key="level1" onNext={nextLevel} />}
