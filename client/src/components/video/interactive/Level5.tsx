@@ -72,7 +72,7 @@ export function Level5({ onRestart }: { onRestart?: () => void }) {
             Get DevSniper Free
           </button>
           <button onClick={() => {
-            window.open('#pricing', '_blank');
+            window.location.href = 'https://interest.org.il/en/devsniper/#pricing';
             if (onRestart) onRestart();
           }} className="px-[2.5vw] py-[1.5vh] bg-[#1D8A77] hover:bg-[#156e5e] text-white rounded-xl font-black text-[clamp(14px,1.5vw,20px)] shadow-lg shadow-[#1D8A77]/30 transition-all hover:scale-105 hover:shadow-[#1D8A77]/50 active:scale-95 flex items-center gap-2">
             <Sparkles className="w-5 h-5" />
