@@ -74,15 +74,6 @@ export function Level4({ onNext }: { onNext: () => void }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {/* Progress Bar */}
-      <div className="absolute top-0 left-0 w-full h-[1vh] bg-slate-200 z-50">
-        <motion.div 
-          className="h-full bg-[#1D8A77]"
-          animate={{ width: `${progress}%` }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        />
-      </div>
-
       <motion.div 
         className="absolute top-[4vh] text-center px-[2vw] z-50 pointer-events-none flex flex-col items-center gap-2"
         initial={{ opacity: 0, y: -20 }}
@@ -113,6 +104,15 @@ export function Level4({ onNext }: { onNext: () => void }) {
           >
             {headline || " "}
           </motion.h1>
+          
+          {/* Progress Bar moved under the text */}
+          <div className="mt-[4vh] w-full max-w-[30vw] h-[0.6vh] bg-slate-200 rounded-full overflow-hidden">
+             <motion.div 
+               className="h-full bg-[#1D8A77]"
+               animate={{ width: `${progress}%` }}
+               transition={{ duration: 0.5, ease: "easeOut" }}
+             />
+          </div>
         </div>
 
         {/* PRO Dark Panel */}
