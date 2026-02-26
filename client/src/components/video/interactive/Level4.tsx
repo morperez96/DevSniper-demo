@@ -13,15 +13,24 @@ export function Level4({ onNext }: { onNext: () => void }) {
   const cssTextareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
-    if (activeTab === 'Text') {
-      const textarea = textareaRef.current;
-      if (textarea) {
-        textarea.focus();
-        textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+    // Add a small delay to ensure the DOM is ready after animation
+    const timeout = setTimeout(() => {
+      if (activeTab === 'Text') {
+        const textarea = textareaRef.current;
+        if (textarea) {
+          textarea.focus();
+          textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+        }
+      } else {
+        const cssTextarea = cssTextareaRef.current;
+        if (cssTextarea) {
+          cssTextarea.focus();
+          cssTextarea.setSelectionRange(cssTextarea.value.length, cssTextarea.value.length);
+        }
       }
-    } else {
-      cssTextareaRef.current?.focus();
-    }
+    }, 50);
+    
+    return () => clearTimeout(timeout);
   }, [activeTab]);
 
   const hasTextChanged = headline !== initialHeadline && headline.trim().length > 0;
