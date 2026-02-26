@@ -20,7 +20,7 @@ export default function VideoTemplate() {
         {currentLevel === 2 && <Level2 key="level2" onNext={nextLevel} />}
         {currentLevel === 3 && <Level3 key="level3" onNext={nextLevel} />}
         {currentLevel === 4 && <Level4 key="level4" onNext={nextLevel} />}
-        {currentLevel === 5 && <Level5 key="level5" />}
+        {currentLevel === 5 && <Level5 key="level5" onRestart={() => setCurrentLevel(1)} />}
       </AnimatePresence>
     </div>
   );
