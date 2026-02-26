@@ -43,6 +43,7 @@ export function Level1({ onNext }: { onNext: () => void }) {
         transition={{ delay: 0.2, duration: 0.5 }}
       >
         <h2 className="text-heading-lg font-black text-slate-900 tracking-tight max-w-[80vw] mx-auto leading-tight">
+          Still hunting for selectors in the DOM?<br/>
           <motion.span 
             animate={{ opacity: [0.5, 1, 0.5] }} 
             transition={{ repeat: Infinity, duration: 2 }}
