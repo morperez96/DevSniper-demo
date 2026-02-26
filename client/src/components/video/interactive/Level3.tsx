@@ -164,14 +164,15 @@ export function Level3({ onNext }: { onNext: () => void }) {
       {/* Floating Target Icon */}
       {targetAttached && (
         <motion.div 
-          className="fixed z-[100] pointer-events-none transition-all duration-75 ease-out"
+          className="fixed z-[100] pointer-events-none transition-all duration-[50ms] ease-linear"
           style={{ 
             left: mousePos.x, 
             top: mousePos.y,
-            transform: 'translate(-24px, -24px)' /* Center exactly based on 48px width/height of icon */
+            x: '-50%',
+            y: '-50%'
           }}
         >
-          <Target className="w-12 h-12 text-[#1D8A77] drop-shadow-[0_0_15px_rgba(29,138,119,0.5)]" />
+          <Target className="w-12 h-12 text-[#1D8A77] drop-shadow-[0_0_15px_rgba(29,138,119,0.5)]" strokeWidth={2} />
         </motion.div>
       )}
     </motion.div>
