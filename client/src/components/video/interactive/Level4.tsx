@@ -50,6 +50,18 @@ export function Level4({ onNext }: { onNext: () => void }) {
     setCssCode(value);
   };
 
+  const hasColor = cssCode.includes('color: #1D8A77;');
+  const hasFullCss = cssCode.includes('background: #0F172A;');
+  const canSave = hasTextChanged && hasFullCss;
+
+  // Calculate overall progress
+  useEffect(() => {
+    let newProgress = 0;
+    if (hasTextChanged) newProgress += 33;
+    if (hasColor) newProgress += 33;
+    if (hasFullCss) newProgress += 34;
+    setProgress(newProgress);
+  }, [hasTextChanged, hasColor, hasFullCss]);
   const applyStyles = () => {
     try {
       const styles = cssCode.split(';').reduce((acc, style) => {
@@ -86,11 +98,14 @@ export function Level4({ onNext }: { onNext: () => void }) {
           {activeTab === 'Text' && hasTextChanged && !hasCssChanged && (
             <>Great! Now <span className="text-[#1D8A77]">click the CSS tab</span>.</>
           )}
-          {activeTab === 'CSS' && !hasCssChanged && (
-            <>2. Type <span className="font-mono bg-slate-200 px-3 py-1 rounded text-teal-600">c</span> and then press <span className="font-mono bg-slate-200 px-3 py-1 rounded text-teal-600">Enter</span></>
+          {activeTab === 'CSS' && !hasColor && (
+            <>2. Type <span className="font-mono bg-slate-200 px-3 py-1 rounded text-teal-600">c</span> to add color.</>
+          )}
+          {activeTab === 'CSS' && hasColor && !hasFullCss && (
+            <>3. Now press <span className="font-mono bg-slate-200 px-3 py-1 rounded text-teal-600">Enter</span> for background styling.</>
           )}
           {canSave && (
-            <>3. Click <span className="text-[#1D8A77]">Save Changes</span> to continue.</>
+            <>4. Perfect! Click <span className="text-[#1D8A77]">Save Changes</span> to continue.</>
           )}
         </h2>
       </motion.div>
