@@ -104,12 +104,12 @@ export function Level1({ onNext }: { onNext: () => void }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            className="absolute bottom-[10vh] flex flex-col items-center gap-4"
+            className="absolute bottom-[4vh] flex flex-col items-center gap-3 z-50 bg-[#F8FAFC]/90 px-8 py-2 rounded-2xl backdrop-blur-sm"
           >
-            <p className="text-slate-500 font-medium">Tired of this?</p>
+            <p className="text-slate-700 font-black text-lg tracking-wide uppercase">Tired of this?</p>
             <button 
               onClick={onNext}
-              className="px-8 py-4 bg-[#1D8A77] hover:bg-[#156e5e] text-white rounded-xl font-bold shadow-xl shadow-[#1D8A77]/30 transition-all active:scale-95 animate-pulse"
+              className="px-8 py-4 bg-[#1D8A77] hover:bg-[#156e5e] text-white rounded-xl font-black text-lg tracking-wide shadow-[0_10px_40px_-10px_rgba(29,138,119,0.8)] transition-all active:scale-95 animate-pulse"
             >
               Click to use the Command Palette
             </button>
