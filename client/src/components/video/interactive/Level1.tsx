@@ -104,7 +104,7 @@ export function Level1({ onNext }: { onNext: () => void }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            className="absolute bottom-[4vh] flex flex-col items-center gap-3 z-50 bg-[#F8FAFC]/90 px-8 py-2 rounded-2xl backdrop-blur-sm"
+            className="absolute bottom-[10vh] flex flex-col items-center gap-3 z-50 bg-[#F8FAFC]/90 px-8 py-2 rounded-2xl backdrop-blur-sm"
           >
             <p className="text-slate-700 font-black text-lg tracking-wide uppercase">Tired of this?</p>
             <button 
