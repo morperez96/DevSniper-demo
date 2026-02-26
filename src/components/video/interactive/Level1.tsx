@@ -41,7 +41,7 @@ export function Level1({ onNext }: { onNext: () => void }) {
 
   return (
     <motion.div
-      className="absolute inset-0 bg-[#F8FAFC] flex flex-col items-center justify-center overflow-hidden p-[2vw]"
+      className="absolute inset-0 bg-[#F8FAFC] flex flex-col items-center justify-start pt-[15vh] overflow-hidden p-[2vw]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
