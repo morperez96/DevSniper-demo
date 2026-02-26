@@ -65,10 +65,16 @@ export function Level5({ onRestart }: { onRestart?: () => void }) {
         </div>
 
         <motion.div variants={item} className="flex gap-[1.5vw] mt-[2vh] items-center">
-          <button onClick={() => window.location.href='https://interest.org.il/wp-content/uploads/2026/01/devsniper.zip'} className="px-[2.5vw] py-[1.5vh] bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-black text-[clamp(14px,1.5vw,20px)] shadow-lg transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
+          <button onClick={() => {
+            window.open('https://interest.org.il/wp-content/uploads/2026/01/devsniper.zip', '_blank');
+            if (onRestart) onRestart();
+          }} className="px-[2.5vw] py-[1.5vh] bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-black text-[clamp(14px,1.5vw,20px)] shadow-lg transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
             Get DevSniper Free
           </button>
-          <button onClick={() => window.location.href='https://interest.org.il/en/devsniper/#pricing'} className="px-[2.5vw] py-[1.5vh] bg-[#1D8A77] hover:bg-[#156e5e] text-white rounded-xl font-black text-[clamp(14px,1.5vw,20px)] shadow-lg shadow-[#1D8A77]/30 transition-all hover:scale-105 hover:shadow-[#1D8A77]/50 active:scale-95 flex items-center gap-2">
+          <button onClick={() => {
+            window.open('https://interest.org.il/en/devsniper/#pricing', '_blank');
+            if (onRestart) onRestart();
+          }} className="px-[2.5vw] py-[1.5vh] bg-[#1D8A77] hover:bg-[#156e5e] text-white rounded-xl font-black text-[clamp(14px,1.5vw,20px)] shadow-lg shadow-[#1D8A77]/30 transition-all hover:scale-105 hover:shadow-[#1D8A77]/50 active:scale-95 flex items-center gap-2">
             <Sparkles className="w-5 h-5" />
             Upgrade to PRO
           </button>
