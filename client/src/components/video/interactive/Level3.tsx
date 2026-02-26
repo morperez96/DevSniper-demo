@@ -131,14 +131,30 @@ export function Level3({ onNext }: { onNext: () => void }) {
 
           {/* Right Icon */}
           {!targetAttached && (
-            <div className="absolute right-[5vw] top-1/2 -translate-y-1/2">
+            <div className="absolute right-[5vw] top-1/2 -translate-y-1/2 flex flex-col items-center gap-4">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="bg-[#1D8A77] text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg relative animate-bounce"
+              >
+                Click me!
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1D8A77]" />
+              </motion.div>
               <motion.button
                 onClick={() => setTargetAttached(true)}
-                className="w-20 h-20 bg-white rounded-2xl shadow-2xl flex items-center justify-center border-2 border-[#1D8A77]/30 hover:border-[#1D8A77] transition-all cursor-pointer group"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ repeat: Infinity, duration: 2 }}
+                className="w-24 h-24 bg-white rounded-2xl shadow-[0_0_30px_rgba(29,138,119,0.3)] flex items-center justify-center border-4 border-[#1D8A77] hover:bg-[#1D8A77]/5 transition-all cursor-pointer group relative overflow-hidden"
+                animate={{ 
+                  scale: [1, 1.1, 1],
+                  boxShadow: [
+                    "0 0 30px rgba(29,138,119,0.3)",
+                    "0 0 50px rgba(29,138,119,0.6)",
+                    "0 0 30px rgba(29,138,119,0.3)"
+                  ]
+                }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
               >
-                <Target className="w-10 h-10 text-[#1D8A77] group-hover:scale-110 transition-transform" />
+                <div className="absolute inset-0 bg-[#1D8A77]/10 animate-ping rounded-xl" />
+                <Target className="w-12 h-12 text-[#1D8A77] group-hover:scale-110 transition-transform relative z-10" strokeWidth={2.5} />
               </motion.button>
             </div>
           )}
