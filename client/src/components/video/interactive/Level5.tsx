@@ -68,7 +68,7 @@ export function Level5() {
           <button className="px-[2vw] py-[1.2vh] bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-black text-[clamp(12px,1.2vw,16px)] shadow-lg transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
             Get DevSniper Free
           </button>
-          <button onClick={() => window.location.href='https://devsniper.com/pro/'} className="px-[2vw] py-[1.2vh] bg-[#1D8A77] hover:bg-[#156e5e] text-white rounded-xl font-black text-[clamp(12px,1.2vw,16px)] shadow-lg shadow-[#1D8A77]/30 transition-all hover:scale-105 hover:shadow-[#1D8A77]/50 active:scale-95 flex items-center gap-2">
+          <button onClick={() => window.location.href='https://interest.org.il/en/devsniper/#pricing'} className="px-[2vw] py-[1.2vh] bg-[#1D8A77] hover:bg-[#156e5e] text-white rounded-xl font-black text-[clamp(12px,1.2vw,16px)] shadow-lg shadow-[#1D8A77]/30 transition-all hover:scale-105 hover:shadow-[#1D8A77]/50 active:scale-95 flex items-center gap-2">
             <Sparkles className="w-4 h-4" />
             Upgrade to PRO
           </button>
