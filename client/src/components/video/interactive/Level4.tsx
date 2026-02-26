@@ -25,12 +25,29 @@ export function Level4({ onNext }: { onNext: () => void }) {
         const cssTextarea = cssTextareaRef.current;
         if (cssTextarea) {
           cssTextarea.focus();
-          cssTextarea.setSelectionRange(cssTextarea.value.length, cssTextarea.value.length);
+          // Always keep cursor at the end for CSS input
+          const len = cssTextarea.value.length;
+          cssTextarea.setSelectionRange(len, len);
         }
       }
-    }, 50);
+    }, 100); // Increased delay slightly to ensure transition completes
     
     return () => clearTimeout(timeout);
+  }, [activeTab]);
+
+  // Handle global keypress for CSS tab to make it feel more "hacker-like"
+  useEffect(() => {
+    const handleGlobalKeyDown = (e: KeyboardEvent) => {
+      if (activeTab === 'CSS') {
+        // If they start typing without focus, force focus
+        if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && document.activeElement !== cssTextareaRef.current) {
+          cssTextareaRef.current?.focus();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleGlobalKeyDown);
+    return () => window.removeEventListener('keydown', handleGlobalKeyDown);
   }, [activeTab]);
 
   const hasTextChanged = headline !== initialHeadline && headline.trim().length > 0;
