@@ -14,16 +14,14 @@ export default function VideoTemplate() {
   };
 
   return (
-    <div className="fixed inset-0 w-full h-full overflow-hidden bg-[#F8FAFC] flex items-center justify-center m-0 p-0">
-      <div className="w-full h-full max-w-[1920px] max-h-[1080px] aspect-video relative">
-        <AnimatePresence mode="wait">
-          {currentLevel === 1 && <Level1 key="level1" onNext={nextLevel} />}
-          {currentLevel === 2 && <Level2 key="level2" onNext={nextLevel} />}
-          {currentLevel === 3 && <Level3 key="level3" onNext={nextLevel} />}
-          {currentLevel === 4 && <Level4 key="level4" onNext={nextLevel} />}
-          {currentLevel === 5 && <Level5 key="level5" onRestart={() => setCurrentLevel(1)} />}
-        </AnimatePresence>
-      </div>
+    <div className="w-screen h-screen overflow-hidden relative bg-[#F8FAFC]">
+      <AnimatePresence mode="wait">
+        {currentLevel === 1 && <Level1 key="level1" onNext={nextLevel} />}
+        {currentLevel === 2 && <Level2 key="level2" onNext={nextLevel} />}
+        {currentLevel === 3 && <Level3 key="level3" onNext={nextLevel} />}
+        {currentLevel === 4 && <Level4 key="level4" onNext={nextLevel} />}
+        {currentLevel === 5 && <Level5 key="level5" onRestart={() => setCurrentLevel(1)} />}
+      </AnimatePresence>
     </div>
   );
 }
