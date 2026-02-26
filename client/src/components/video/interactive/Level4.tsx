@@ -1,0 +1,107 @@
+import { motion, AnimatePresence } from 'framer-motion';
+import { Target, Type, Code2, Save, Settings } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
+
+export function Level4({ onNext }: { onNext: () => void }) {
+  const [headline, setHeadline] = useState('Ultimate Workflow');
+  const [initialHeadline] = useState('Ultimate Workflow');
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    textareaRef.current?.focus();
+  }, []);
+
+  const hasChanged = headline !== initialHeadline && headline.trim().length > 0;
+
+  return (
+    <motion.div
+      className="absolute inset-0 bg-[#F8FAFC] flex flex-col items-center justify-center overflow-hidden p-[2vw]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <motion.div 
+        className="absolute top-[4vh] text-center px-[2vw] z-50 pointer-events-none"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <h2 className="text-heading-md font-black text-slate-900 tracking-tight">
+          Try it yourself! <span className="text-[#1D8A77]">Edit the text below.</span>
+        </h2>
+      </motion.div>
+
+      <div className="w-full max-w-[90vw] flex gap-[3vw] items-center h-full relative mt-[8vh]">
+        {/* Live Preview Side */}
+        <div className="flex-1 flex flex-col items-center justify-center min-h-[40vh] relative z-10 px-[1vw]">
+           <motion.h1 
+            className="text-heading-xl font-black text-center tracking-tighter leading-[1.1] transition-all duration-300 shadow-sm max-w-[55vw] w-full text-slate-900"
+          >
+            {headline || " "}
+          </motion.h1>
+        </div>
+
+        {/* PRO Dark Panel */}
+        <motion.div 
+          className="w-[clamp(280px,25vw,400px)] bg-[#1E293B] rounded-2xl shadow-xl border border-slate-700 overflow-hidden text-white flex flex-col h-[clamp(400px,55vh,600px)] relative z-20 shrink-0"
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ type: 'spring', damping: 25 }}
+        >
+          <div className="p-[1vw] bg-[#0F172A] border-b border-slate-800 flex justify-between items-center shadow-md">
+            <div className="flex items-center gap-[0.5vw]">
+              <div className="w-[clamp(24px,2vw,36px)] h-[clamp(24px,2vw,36px)] rounded-lg bg-[#1D8A77] flex items-center justify-center shadow-lg">
+                <Target className="w-[clamp(16px,1.2vw,24px)] h-[clamp(16px,1.2vw,24px)] text-white" />
+              </div>
+              <span className="font-black text-[clamp(10px,1.2vw,16px)] tracking-tight">DevSniper <span className="text-[#1D8A77]">PRO</span></span>
+            </div>
+            <div className="w-[clamp(6px,0.6vw,10px)] h-[clamp(6px,0.6vw,10px)] rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)] animate-pulse" />
+          </div>
+
+          <div className="flex bg-[#1E293B] border-b border-slate-800">
+             {['General', 'Text', 'CSS'].map((tab) => (
+               <div 
+                key={tab}
+                className={`flex-1 py-[0.8vh] text-center text-[clamp(8px,0.9vw,12px)] font-black uppercase tracking-widest transition-all cursor-default ${tab === 'Text' ? 'text-white border-b-2 border-[#1D8A77] bg-[#0F172A]/40' : 'text-slate-500 opacity-50'}`}
+               >
+                 <div className="flex flex-col items-center gap-[0.3vh]">
+                   {tab === 'General' && <Settings className="w-[clamp(10px,1vw,14px)] h-[clamp(10px,1vw,14px)]" />}
+                   {tab === 'Text' && <Type className="w-[clamp(10px,1vw,14px)] h-[clamp(10px,1vw,14px)]" />}
+                   {tab === 'CSS' && <Code2 className="w-[clamp(10px,1vw,14px)] h-[clamp(10px,1vw,14px)]" />}
+                   {tab}
+                 </div>
+               </div>
+             ))}
+          </div>
+
+          <div className="p-[1.2vw] space-y-[1vh] flex-1 flex flex-col bg-[#0F172A]/30">
+            <div className="flex-1 bg-[#0F172A] rounded-xl p-[1vw] border border-slate-800 shadow-inner relative overflow-hidden flex flex-col">
+               <div className="absolute top-0 left-0 w-[0.3vw] h-full bg-[#1D8A77]/20" />
+               <label className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-widest">Content</label>
+               <textarea 
+                  ref={textareaRef}
+                  value={headline}
+                  onChange={(e) => setHeadline(e.target.value)}
+                  className="flex-1 w-full bg-transparent border-none outline-none text-white font-medium resize-none text-[clamp(14px,1.2vw,18px)] leading-relaxed"
+                  placeholder="Type your headline here..."
+               />
+            </div>
+
+            <div className="flex justify-end items-center mt-4">
+               <button 
+                onClick={() => hasChanged && onNext()}
+                className={`px-[1.5vw] py-[1vh] rounded-xl font-black text-[clamp(12px,1.2vw,16px)] flex items-center gap-[0.5vw] shadow-lg transition-all ${
+                  hasChanged 
+                    ? 'bg-[#1D8A77] text-white hover:bg-[#156e5e] hover:shadow-[0_0_20px_rgba(29,138,119,0.6)] cursor-pointer scale-105 animate-pulse' 
+                    : 'bg-slate-800 text-slate-500 cursor-not-allowed'
+                }`}
+               >
+                 <Save className="w-[clamp(14px,1.2vw,20px)] h-[clamp(14px,1.2vw,20px)]" />
+                 Save Changes
+               </button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}

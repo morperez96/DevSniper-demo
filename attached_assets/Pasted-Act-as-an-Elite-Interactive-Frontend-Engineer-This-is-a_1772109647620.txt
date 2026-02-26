@@ -1,0 +1,44 @@
+Act as an Elite Interactive Frontend Engineer. This is a MAJOR PIVOT. We are transforming our automated promotional video into an INTERACTIVE, PLAYABLE DEMO (like a mini-game) that users will actively click and type through. It will be embedded into a WordPress landing page via iframe.
+
+CRITICAL ARCHITECTURE CHANGES:
+1. STOP AUTO-PLAYING: Remove the automatic timeline/timeouts. The progression must now be controlled by a React state machine (e.g., `const [step, setStep] = useState(1)`).
+2. USER-DRIVEN ACTIONS: The user must trigger the transitions. Add pulsing visual cues (like a glowing dot or animated text) telling the user exactly what to do next (e.g., "Hover here", "Click to inspect", "Type to edit").
+3. REAL INPUTS: In the "Live Edit" stage, the user must be able to ACTUALLY type into a real `<input>` or `<textarea>`, and the massive text on the screen must update dynamically based on their real keystrokes.
+
+=== THE INTERACTIVE "GAME" LEVELS ===
+
+Level 1: The Messy DOM
+- UI: The dark macOS code window.
+- Instruction pulsing on screen: "Hover over the code to find the element."
+- Interaction: User moves their real mouse over the code. Lines highlight on hover.
+- Progression: After hovering over 3 different lines, a pulsing "Next" button appears: "Tired of this? Click to use the Command Palette." -> Clicks to Level 2.
+
+Level 2: Admin Search
+- UI: A dark overlay with the DevSniper Command Palette in the center. 
+- Instruction: "Type 'hero' to search."
+- Interaction: User actually clicks the input and types. Once they type "hero", the 3 results pop up.
+- Progression: A pulsing cursor points to the "Home Page" result. Instruction: "Click to Edit Home Page." -> Clicks to Level 3.
+
+Level 3: The Target Inspector
+- UI: The clean split-screen layout. Left: Massive Text. Right: A pulsing DevSniper Target Icon (`<Target />`).
+- Instruction: "Click the Target icon to activate the Inspector."
+- Interaction: User clicks the Target.
+- Progression: The Target icon attaches to their mouse. Instruction: "Now click the massive text on the left." -> Clicks text -> Moves to Level 4.
+
+Level 4: Live Edit (THE MAGIC)
+- UI: The PRO floating panel opens on the right. The "TEXT" tab is active with a real, editable `<textarea>`.
+- Instruction: "Try it yourself! Edit the text below."
+- Interaction: The user TYPES in the textarea. The massive text on the left updates IN REAL TIME to exactly what they are typing.
+- Progression: Once they type at least 3 characters, the "Save Changes" button glows intensely. User clicks "Save" -> Moves to Level 5.
+
+Level 5: Value & CTA
+- UI: The screen clears. The 8 feature cards pop up beautifully.
+- Bottom CTA: "Stop Searching. Start Snipping."
+- Buttons: Real clickable buttons appear for "Get DevSniper Free" and "Upgrade to PRO".
+
+=== TECHNICAL REQUIREMENTS ===
+- Tech: React, Tailwind CSS, Framer Motion, Lucide React.
+- Use `useState` to manage `currentStep` and `userInputText`.
+- Provide smooth Framer Motion `AnimatePresence` transitions between levels so it feels like a seamless app, not just changing pages.
+- Ensure the layout remains the "Floating Minimal UI" on a `#f8f9fa` background with Bottom Captions for the main messaging.
+- Output the complete, functional interactive React component.
