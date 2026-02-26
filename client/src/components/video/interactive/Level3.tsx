@@ -37,7 +37,7 @@ export function Level3({ onNext }: { onNext: () => void }) {
             </>
           ) : (
             <>
-              Now <span className="text-[#1D8A77]">hover over the elements</span> and click to select.
+              Now click the <span className="text-[#1D8A77]">Ultimate Workflow</span> title to select it.
             </>
           )}
         </h2>
@@ -83,7 +83,6 @@ export function Level3({ onNext }: { onNext: () => void }) {
               className={`text-[clamp(0.8rem,1.2vw,1.4rem)] text-slate-500 font-medium mt-4 transition-all rounded-lg w-fit ${targetAttached ? 'hover:bg-[#1D8A77]/10 hover:ring-2 hover:ring-[#1D8A77] cursor-pointer relative z-10 p-2 -ml-2' : ''}`}
               onMouseEnter={() => setHoveredElement('p')}
               onMouseLeave={() => setHoveredElement(null)}
-              onClick={() => targetAttached && onNext()}
             >
               Experience the future of development with DevSniper PRO.
               
@@ -109,7 +108,6 @@ export function Level3({ onNext }: { onNext: () => void }) {
               className={`mt-8 px-6 py-3 bg-slate-900 text-white rounded-xl font-bold w-fit transition-all ${targetAttached ? 'hover:bg-slate-800 hover:ring-2 hover:ring-[#1D8A77] hover:ring-offset-2 cursor-pointer relative z-10' : ''}`}
               onMouseEnter={() => setHoveredElement('button')}
               onMouseLeave={() => setHoveredElement(null)}
-              onClick={() => targetAttached && onNext()}
             >
               Get Started Now
               
