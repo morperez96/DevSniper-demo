@@ -23,7 +23,7 @@ export function Level5() {
 
   const item = {
     hidden: { y: 20, opacity: 0, scale: 0.9 },
-    show: { y: 0, opacity: 1, scale: 1, transition: { type: 'spring', damping: 20 } }
+    show: { y: 0, opacity: 1, scale: 1, transition: { type: 'spring' as const, damping: 20 } }
   };
 
   return (

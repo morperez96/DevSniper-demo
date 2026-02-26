@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 export function Level3({ onNext }: { onNext: () => void }) {
   const [targetAttached, setTargetAttached] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [hoveredElement, setHoveredElement] = useState<string | null>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -36,7 +37,7 @@ export function Level3({ onNext }: { onNext: () => void }) {
             </>
           ) : (
             <>
-              Now <span className="text-[#1D8A77]">click the massive text</span> on the left.
+              Now <span className="text-[#1D8A77]">hover over the elements</span> and click to select.
             </>
           )}
         </h2>
@@ -53,16 +54,79 @@ export function Level3({ onNext }: { onNext: () => void }) {
 
         <div className="flex-1 flex items-center justify-center p-[2vw] relative">
           {/* Left Text */}
-          <div 
-            className={`flex-1 p-[2vw] rounded-xl transition-all ${targetAttached ? 'hover:bg-[#1D8A77]/10 hover:ring-2 hover:ring-[#1D8A77] cursor-pointer' : ''}`}
-            onClick={() => targetAttached && onNext()}
-          >
-            <h1 className="text-[clamp(2rem,4vw,5rem)] font-black text-slate-900 tracking-tighter leading-tight pointer-events-none">
+          <div className="flex-1 p-[2vw] relative">
+            <h1 
+              className={`text-[clamp(2rem,4vw,5rem)] font-black text-slate-900 tracking-tighter leading-tight transition-all rounded-xl w-fit ${targetAttached ? 'hover:bg-[#1D8A77]/10 hover:ring-2 hover:ring-[#1D8A77] cursor-pointer relative z-10' : ''}`}
+              onClick={() => targetAttached && onNext()}
+              onMouseEnter={() => setHoveredElement('h1')}
+              onMouseLeave={() => setHoveredElement(null)}
+            >
               Ultimate Workflow
+              
+              {/* Tooltip that appears when hovering with target */}
+              <AnimatePresence>
+                {targetAttached && hoveredElement === 'h1' && (
+                  <motion.div 
+                    className="absolute -top-16 left-1/2 -translate-x-1/2 bg-[#1E293B] text-white text-sm py-2 px-4 rounded-lg shadow-xl whitespace-nowrap font-mono border border-slate-700 pointer-events-none"
+                    initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 5, scale: 0.9 }}
+                  >
+                    <span className="text-teal-400 font-bold mr-2">&lt;h1&gt;</span>
+                    <span className="text-blue-400">.hero-title</span>
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#1E293B]" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </h1>
-            <p className="text-[clamp(0.8rem,1.2vw,1.4rem)] text-slate-500 font-medium mt-4 pointer-events-none">
+            <p 
+              className={`text-[clamp(0.8rem,1.2vw,1.4rem)] text-slate-500 font-medium mt-4 transition-all rounded-lg w-fit ${targetAttached ? 'hover:bg-[#1D8A77]/10 hover:ring-2 hover:ring-[#1D8A77] cursor-pointer relative z-10 p-2 -ml-2' : ''}`}
+              onMouseEnter={() => setHoveredElement('p')}
+              onMouseLeave={() => setHoveredElement(null)}
+            >
               Experience the future of development with DevSniper PRO.
+              
+              {/* Tooltip for paragraph */}
+              <AnimatePresence>
+                {targetAttached && hoveredElement === 'p' && (
+                  <motion.div 
+                    className="absolute -top-12 left-10 bg-[#1E293B] text-white text-sm py-1.5 px-3 rounded-lg shadow-xl whitespace-nowrap font-mono border border-slate-700 pointer-events-none"
+                    initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 5, scale: 0.9 }}
+                  >
+                    <span className="text-teal-400 font-bold mr-2">&lt;p&gt;</span>
+                    <span className="text-slate-300">text-slate-500</span>
+                    <div className="absolute -bottom-2 left-4 border-4 border-transparent border-t-[#1E293B]" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </p>
+            
+            {/* Added button to hover over */}
+            <div 
+              className={`mt-8 px-6 py-3 bg-slate-900 text-white rounded-xl font-bold w-fit transition-all ${targetAttached ? 'hover:bg-slate-800 hover:ring-2 hover:ring-[#1D8A77] hover:ring-offset-2 cursor-pointer relative z-10' : ''}`}
+              onMouseEnter={() => setHoveredElement('button')}
+              onMouseLeave={() => setHoveredElement(null)}
+            >
+              Get Started Now
+              
+              {/* Tooltip for button */}
+              <AnimatePresence>
+                {targetAttached && hoveredElement === 'button' && (
+                  <motion.div 
+                    className="absolute -top-12 left-1/2 -translate-x-1/2 bg-[#1E293B] text-white text-sm py-1.5 px-3 rounded-lg shadow-xl whitespace-nowrap font-mono border border-slate-700 pointer-events-none"
+                    initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 5, scale: 0.9 }}
+                  >
+                    <span className="text-teal-400 font-bold mr-2">&lt;button&gt;</span>
+                    <span className="text-blue-400">.btn-primary</span>
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#1E293B]" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* Right Icon */}
@@ -84,8 +148,12 @@ export function Level3({ onNext }: { onNext: () => void }) {
       {/* Floating Target Icon */}
       {targetAttached && (
         <motion.div 
-          className="fixed z-[100] pointer-events-none"
-          style={{ x: mousePos.x - 24, y: mousePos.y - 24 }}
+          className="fixed z-[100] pointer-events-none transition-all duration-75 ease-out"
+          style={{ 
+            left: mousePos.x, 
+            top: mousePos.y,
+            transform: 'translate(-50%, -50%)'
+          }}
         >
           <Target className="w-12 h-12 text-[#1D8A77] drop-shadow-[0_0_15px_rgba(29,138,119,0.5)]" />
         </motion.div>
