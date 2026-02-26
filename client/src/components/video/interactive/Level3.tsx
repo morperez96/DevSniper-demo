@@ -79,7 +79,7 @@ export function Level3({ onNext }: { onNext: () => void }) {
                 )}
               </AnimatePresence>
             </h1>
-            <p 
+            <div 
               className={`text-[clamp(0.8rem,1.2vw,1.4rem)] text-slate-500 font-medium mt-4 transition-all rounded-lg w-fit ${targetAttached ? 'hover:bg-[#1D8A77]/10 hover:ring-2 hover:ring-[#1D8A77] cursor-pointer relative z-10 p-2 -ml-2' : ''}`}
               onMouseEnter={() => setHoveredElement('p')}
               onMouseLeave={() => setHoveredElement(null)}
@@ -101,7 +101,7 @@ export function Level3({ onNext }: { onNext: () => void }) {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </p>
+            </div>
             
             {/* Added button to hover over */}
             <div 

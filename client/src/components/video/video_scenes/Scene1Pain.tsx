@@ -65,10 +65,10 @@ export function Scene1Pain() {
               <span className="text-slate-500">&lt;</span>
               <span className="text-pink-400">{line.tag}</span>
               {line.class && (
-                <>
-                  <span className="text-slate-400"> class=</span>
+                <span className="inline-flex">
+                  <span className="text-slate-400">&nbsp;class=</span>
                   <span className="text-amber-200">"{line.class}"</span>
-                </>
+                </span>
               )}
               <span className="text-slate-500">&gt;</span>
             </motion.div>
