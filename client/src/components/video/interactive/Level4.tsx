@@ -40,15 +40,25 @@ export function Level4({ onNext }: { onNext: () => void }) {
     const handleGlobalKeyDown = (e: KeyboardEvent) => {
       if (activeTab === 'CSS') {
         // If they start typing without focus, force focus
-        if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && document.activeElement !== cssTextareaRef.current) {
-          cssTextareaRef.current?.focus();
+        if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
+          const cssTextarea = cssTextareaRef.current;
+          if (cssTextarea && document.activeElement !== cssTextarea) {
+            cssTextarea.focus();
+            
+            // If the field is completely empty and they pressed 'c', handle the auto-complete directly
+            // since the first keypress won't be captured by the textarea's onChange if it just got focus
+            if (cssCode === '' && e.key.toLowerCase() === 'c') {
+              e.preventDefault(); // Prevent the actual 'c' from being typed
+              setCssCode('color: #1D8A77;');
+            }
+          }
         }
       }
     };
 
     window.addEventListener('keydown', handleGlobalKeyDown);
     return () => window.removeEventListener('keydown', handleGlobalKeyDown);
-  }, [activeTab]);
+  }, [activeTab, cssCode]);
 
   const hasTextChanged = headline !== initialHeadline && headline.trim().length > 0;
   const hasCssChanged = cssCode.trim().length > 0;
