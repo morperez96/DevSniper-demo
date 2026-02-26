@@ -49,7 +49,7 @@ export function Level5() {
         <div className="grid grid-cols-4 gap-[0.8vw] w-full max-w-[80vw]">
           {features.map((f, i) => (
             <motion.div key={i} variants={item} className="group relative">
-              <div className="relative flex flex-col items-center justify-center gap-1 bg-white border border-slate-100 p-2 rounded-2xl shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-[#1D8A77]/10 transition-all duration-500 text-center aspect-square w-full">
+              <div className="relative flex flex-col items-center justify-center gap-1 bg-white border border-slate-100 p-1 rounded-2xl shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-[#1D8A77]/10 transition-all duration-500 text-center aspect-square w-full">
                 <div className="w-[clamp(48px,5vw,64px)] h-[clamp(48px,5vw,64px)] flex items-center justify-center bg-slate-50 rounded-xl group-hover:scale-110 group-hover:bg-[#1D8A77]/10 transition-all duration-500 mb-1 text-slate-400 group-hover:text-[#1D8A77]">
                    <f.icon className="w-[clamp(24px,2.5vw,32px)] h-[clamp(24px,2.5vw,32px)]" strokeWidth={1.5} />
                 </div>
