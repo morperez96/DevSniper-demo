@@ -14,7 +14,11 @@ export function Level4({ onNext }: { onNext: () => void }) {
 
   useEffect(() => {
     if (activeTab === 'Text') {
-      textareaRef.current?.focus();
+      const textarea = textareaRef.current;
+      if (textarea) {
+        textarea.focus();
+        textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+      }
     } else {
       cssTextareaRef.current?.focus();
     }
