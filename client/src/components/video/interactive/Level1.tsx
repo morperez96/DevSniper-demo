@@ -48,7 +48,7 @@ export function Level1({ onNext }: { onNext: () => void }) {
       transition={{ duration: 0.4 }}
     >
       <motion.div 
-        className="mb-[2vh] text-center z-50 px-[2vw] -mt-[10vh]"
+        className="mb-[2vh] text-center z-50 px-[2vw] -mt-[15vh]"
         initial={{ y: -15, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
@@ -104,7 +104,7 @@ export function Level1({ onNext }: { onNext: () => void }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            className="absolute bottom-[6vh] flex flex-col items-center gap-3 z-50 bg-[#F8FAFC]/90 px-8 py-2 rounded-2xl backdrop-blur-sm"
+            className="absolute bottom-[12vh] flex flex-col items-center gap-3 z-50 bg-[#F8FAFC]/90 px-8 py-2 rounded-2xl backdrop-blur-sm"
           >
             <p className="text-slate-700 font-black text-lg tracking-wide uppercase">Tired of this?</p>
             <button 
