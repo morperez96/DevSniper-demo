@@ -38,7 +38,16 @@ export function Level4({ onNext }: { onNext: () => void }) {
   };
 
   const handleCssChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setCssCode(e.target.value);
+    let value = e.target.value;
+    
+    // Auto-complete logic for CSS
+    if (value.toLowerCase().trim() === 'c' && cssCode === '') {
+      value = 'color: #1D8A77;';
+    } else if (value.includes('\n') && cssCode === 'color: #1D8A77;') {
+      value = 'color: #1D8A77;\nbackground: #f0fdfa;\nborder-radius: 12px;';
+    }
+
+    setCssCode(value);
   };
 
   const applyStyles = () => {
@@ -79,18 +88,18 @@ export function Level4({ onNext }: { onNext: () => void }) {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h2 className="text-heading-md font-black text-slate-900 tracking-tight">
+        <h2 className="text-heading-lg font-black text-slate-900 tracking-tight">
           {activeTab === 'Text' && !hasTextChanged && (
-            <>Try it yourself! <span className="text-[#1D8A77]">Edit the text below.</span></>
+            <>1. <span className="text-[#1D8A77]">Edit the text</span> in the panel below.</>
           )}
           {activeTab === 'Text' && hasTextChanged && !hasCssChanged && (
-            <>Great! Now <span className="text-[#1D8A77]">click the CSS tab</span> to style it.</>
+            <>Great! Now <span className="text-[#1D8A77]">click the CSS tab</span>.</>
           )}
           {activeTab === 'CSS' && !hasCssChanged && (
-            <>Try adding: <span className="font-mono bg-slate-200 px-2 py-1 rounded text-teal-600 text-sm">color: #1D8A77;</span></>
+            <>2. Type <span className="font-mono bg-slate-200 px-3 py-1 rounded text-teal-600">c</span> and then press <span className="font-mono bg-slate-200 px-3 py-1 rounded text-teal-600">Enter</span></>
           )}
           {canSave && (
-            <>Perfect! <span className="text-[#1D8A77]">Save Changes</span> to continue.</>
+            <>3. Click <span className="text-[#1D8A77]">Save Changes</span> to continue.</>
           )}
         </h2>
       </motion.div>
