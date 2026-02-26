@@ -67,13 +67,13 @@ export function Level3({ onNext }: { onNext: () => void }) {
               <AnimatePresence>
                 {targetAttached && hoveredElement === 'h1' && (
                   <motion.div 
-                    className="absolute -top-16 left-1/2 -translate-x-1/2 bg-[#1E293B] text-white text-sm py-2 px-6 rounded-lg shadow-xl whitespace-nowrap font-mono border border-slate-700 pointer-events-none flex items-center justify-center gap-4"
+                    className="absolute -top-16 left-1/2 -translate-x-1/2 bg-[#1E293B] text-white py-2 px-6 rounded-lg shadow-xl whitespace-nowrap font-mono border border-slate-700 pointer-events-none flex items-center justify-center gap-5"
                     initial={{ opacity: 0, y: 10, scale: 0.9 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 5, scale: 0.9 }}
                   >
-                    <span className="text-teal-400 font-bold">&lt;h1&gt;</span>
-                    <span className="text-blue-400">.hero-title</span>
+                    <span className="text-teal-400 font-bold text-[15px] tracking-wide">&lt;h1&gt;</span>
+                    <span className="text-blue-400 text-[15px] tracking-wider font-semibold">.hero-title</span>
                     <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#1E293B]" />
                   </motion.div>
                 )}
@@ -168,9 +168,7 @@ export function Level3({ onNext }: { onNext: () => void }) {
           style={{ 
             left: mousePos.x, 
             top: mousePos.y,
-            transform: 'translate(-50%, -50%)',
-            marginTop: '-16px', /* Better centering over the target center */
-            marginLeft: '-16px'
+            transform: 'translate(-24px, -24px)' /* Center exactly based on 48px width/height of icon */
           }}
         >
           <Target className="w-12 h-12 text-[#1D8A77] drop-shadow-[0_0_15px_rgba(29,138,119,0.5)]" />
